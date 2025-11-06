@@ -1,0 +1,75 @@
+{
+  "lang_name": "Català",
+  "nav": {
+    "home": "Inici",
+    "about": "Qui som",
+    "services": "Què fem",
+    "capabilities": "Capacitats",
+    "areas": "Zones on treballem",
+    "history": "Història",
+    "contact": "Contacte"
+  },
+  "hero": {
+    "title": "Solucions elèctriques professionals",
+    "subtitle": "Instal·lacions, manteniment i automatització per a indústria i llar a l’Empordà i província de Girona.",
+    "cta": "Contacta ara"
+  },
+  "about": {
+    "title": "Qui som",
+    "p1": "Som una empresa familiar d’electricitat a Figueres amb dècades d’experiència. Treballem amb rigor, proximitat i compromís.",
+    "p2": "Acompanyem el client en tot el cicle: disseny, instal·lació, posada en marxa i manteniment preventiu."
+  },
+  "services": {
+    "title": "Què fem",
+    "items": [
+      {
+        "h": "Instal·lacions industrials i terciàries",
+        "p": "Quadres elèctrics, línies, proteccions i legalitzacions de baixa tensió."
+      },
+      {
+        "h": "Domòtica i automatització",
+        "p": "Integració KNX, sensors, programació i millora d’eficiència."
+      },
+      {
+        "h": "Manteniment preventiu i correctiu",
+        "p": "Inspeccions periòdiques, termografia i resposta àgil a avaries."
+      },
+      {
+        "h": "Il·luminació i eficiència energètica",
+        "p": "Projectes LED, càlcul lumínic i reducció de consums."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacitats principals",
+    "list": [
+      "Certificació elèctrica i butlletins",
+      "Quadres i canalitzacions a mida",
+      "Integració amb IT/OT i xarxes",
+      "Compliment normatiu i seguretat",
+      "Treball ordenat i net a obra"
+    ]
+  },
+  "areas": {
+    "title": "Zones on treballem",
+    "p": "Figueres, Girona, Alt Empordà, Baix Empordà i voltants."
+  },
+  "history": {
+    "title": "Història",
+    "p1": "Des dels inicis, hem apostat per la feina ben feta i la innovació responsable.",
+    "p2": "El nostre recorregut avala la confiança de clients particulars, comerços i indústries."
+  },
+  "contact": {
+    "title": "Contacte",
+    "desc": "Explica’ns què necessites i et respondrem el més aviat possible.",
+    "name": "Nom",
+    "email": "Correu electrònic",
+    "message": "Missatge",
+    "send": "Enviar",
+    "sending": "Enviant…",
+    "sent": "Enviat! Gràcies pel teu missatge."
+  },
+  "footer": {
+    "rights": "Tots els drets reservats"
+  }
+}

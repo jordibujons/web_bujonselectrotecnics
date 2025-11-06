@@ -1,0 +1,75 @@
+{
+  "lang_name": "Français",
+  "nav": {
+    "home": "Accueil",
+    "about": "Qui sommes-nous",
+    "services": "Ce que nous faisons",
+    "capabilities": "Compétences",
+    "areas": "Zones d’intervention",
+    "history": "Histoire",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Solutions électriques professionnelles",
+    "subtitle": "Installations, maintenance et automatisation pour l’industrie et le résidentiel dans l’Empordà et la province de Gérone.",
+    "cta": "Nous contacter"
+  },
+  "about": {
+    "title": "Qui sommes-nous",
+    "p1": "Entreprise familiale d’électricité à Figueres avec des décennies d’expérience. Travail rigoureux, proximité et engagement.",
+    "p2": "Nous accompagnons le client tout au long du cycle : conception, installation, mise en service et maintenance préventive."
+  },
+  "services": {
+    "title": "Ce que nous faisons",
+    "items": [
+      {
+        "h": "Installations industrielles et tertiaires",
+        "p": "Tableaux électriques, lignes, protections et homologations basse tension."
+      },
+      {
+        "h": "Domotique et automatisation",
+        "p": "Intégration KNX, capteurs, programmation et amélioration de l’efficacité."
+      },
+      {
+        "h": "Maintenance préventive et corrective",
+        "p": "Inspections périodiques, thermographie et réponse rapide aux pannes."
+      },
+      {
+        "h": "Éclairage et efficacité énergétique",
+        "p": "Projets LED, calcul lumineux et réduction de la consommation."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Compétences clés",
+    "list": [
+      "Certification électrique et attestations",
+      "Tableaux et canalisations sur mesure",
+      "Intégration IT/OT et réseaux",
+      "Conformité et sécurité",
+      "Travail ordonné et propre sur site"
+    ]
+  },
+  "areas": {
+    "title": "Zones d’intervention",
+    "p": "Figueres, Gérone, Alt Empordà, Baix Empordà et environs."
+  },
+  "history": {
+    "title": "Histoire",
+    "p1": "Dès le début, nous avons misé sur le travail bien fait et l’innovation responsable.",
+    "p2": "Notre parcours inspire la confiance des particuliers, commerces et industries."
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "Dites-nous votre besoin et nous vous répondrons au plus vite.",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi…",
+    "sent": "Envoyé ! Merci pour votre message."
+  },
+  "footer": {
+    "rights": "Tous droits réservés"
+  }
+}

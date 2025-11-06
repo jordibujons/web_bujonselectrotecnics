@@ -1,0 +1,75 @@
+{
+  "lang_name": "Español",
+  "nav": {
+    "home": "Inicio",
+    "about": "Quiénes somos",
+    "services": "Qué hacemos",
+    "capabilities": "Capacidades",
+    "areas": "Zonas de trabajo",
+    "history": "Historia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Soluciones eléctricas profesionales",
+    "subtitle": "Instalaciones, mantenimiento y automatización para industria y hogar en el Empordà y provincia de Girona.",
+    "cta": "Contacta ahora"
+  },
+  "about": {
+    "title": "Quiénes somos",
+    "p1": "Somos una empresa familiar de electricidad en Figueres con décadas de experiencia. Trabajamos con rigor, cercanía y compromiso.",
+    "p2": "Acompañamos al cliente en todo el ciclo: diseño, instalación, puesta en marcha y mantenimiento preventivo."
+  },
+  "services": {
+    "title": "Qué hacemos",
+    "items": [
+      {
+        "h": "Instalaciones industriales y terciarias",
+        "p": "Cuadros eléctricos, líneas, protecciones y legalizaciones de baja tensión."
+      },
+      {
+        "h": "Domótica y automatización",
+        "p": "Integración KNX, sensores, programación y mejora de eficiencia."
+      },
+      {
+        "h": "Mantenimiento preventivo y correctivo",
+        "p": "Inspecciones periódicas, termografía y respuesta ágil a averías."
+      },
+      {
+        "h": "Iluminación y eficiencia energética",
+        "p": "Proyectos LED, cálculo lumínico y reducción de consumos."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Capacidades principales",
+    "list": [
+      "Certificación eléctrica y boletines",
+      "Cuadros y canalizaciones a medida",
+      "Integración con IT/OT y redes",
+      "Cumplimiento normativo y seguridad",
+      "Trabajo ordenado y limpio en obra"
+    ]
+  },
+  "areas": {
+    "title": "Zonas de trabajo",
+    "p": "Figueres, Girona, Alt Empordà, Baix Empordà y alrededores."
+  },
+  "history": {
+    "title": "Historia",
+    "p1": "Desde el inicio, apostamos por el trabajo bien hecho y la innovación responsable.",
+    "p2": "Nuestro recorrido avala la confianza de clientes particulares, comercios e industrias."
+  },
+  "contact": {
+    "title": "Contacto",
+    "desc": "Cuéntanos qué necesitas y te responderemos lo antes posible.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "sending": "Enviando…",
+    "sent": "¡Enviado! Gracias por tu mensaje."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados"
+  }
+}
