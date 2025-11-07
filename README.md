@@ -1,25 +1,21 @@
-# Web multilingüe – Bujons Electrotècnics
+# Bujons Electrotècnics — Web corporativa (CAT)
+Generat: 2025-11-07
 
-Idiomes: Català (per defecte), Español, Français, English.  
-Tecnologia: HTML + CSS + JS pur (sense dependències).
+## Com usar
+1) Obre `index.html` amb Live Server (VS Code) per veure la web en local.
+2) Puja-ho a GitHub Pages o Vercel per publicar-ho (0€).
 
-## Estructura
-- `index.html` — pàgina única amb seccions i i18n
-- `styles.css` — estil modern
-- `script.js` — canvi d’idioma + validació de formulari
-- `i18n/*.json` — textos per idioma
-- `assets/logo.svg` — logotip
+## Formulari
+- A `contacte.html` i `script.js`, substitueix:
+  - `AQUI_LA_TEVA_SITE_KEY` (Google reCAPTCHA v2)
+  - `YOUR_ENDPOINT` (ID de Formspree)
+- Configura l'enviament a **joorxishere@gmail.com** dins de Formspree.
 
-## Formulari de contacte (gratuït, sense backend propi)
-- Al `script.js`, substitueix `YOUR_ENDPOINT` pel teu formulari de **Formspree**.
-- Alternativa: EmailJS, Netlify Forms o backend propi.
+## Continguts pendents (per bloqueig robots.txt del web antic)
+- A `empresa.html`, seccions **El nostre equip** i **La nostra història**
+- A `productes-serveis.html`, tota la descripció
+- A `avis-legal.html`, el text complet
+Enganxa-hi el text exacte i guarda.
 
-## Desplegament gratis
-- **GitHub Pages**: puja el repo i activa *Settings ▸ Pages*.
-- **Vercel/Netlify**: importa el repo o arrossega la carpeta.
-
-## SEO local
-- Edita `meta description`, telèfon i JSON-LD a `index.html`.
-- Enllaça el vostre Google Business Profile i ressenyes.
-
-© 2025 Bujons Electrotècnics
+## Favicon
+- Ara mateix `assets/favicon.png` reutilitza el logo. Si tens el símbol “B” aïllat, substitueix-lo per `assets/favicon.png` (mateixes dimensions).

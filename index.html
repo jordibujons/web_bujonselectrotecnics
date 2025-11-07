@@ -1,128 +1,42 @@
-<!doctype html>
-<html lang="ca">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bujons Electrotècnics · Figueres</title>
-  <meta name="description" content="Instal·lacions elèctriques, manteniment i automatització. Empresa familiar a Figueres amb dècades d’experiència." />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="alternate" hreflang="ca" href="https://www.bujonselectrotecnics.com/ca/" />
-  <link rel="alternate" hreflang="es" href="https://www.bujonselectrotecnics.com/es/" />
-  <link rel="alternate" hreflang="en" href="https://www.bujonselectrotecnics.com/en/" />
-  <link rel="alternate" hreflang="fr" href="https://www.bujonselectrotecnics.com/fr/" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Bujons Electrotècnics",
-    "image": "https://www.bujonselectrotecnics.com/assets/logo.svg",
-    "address": { "@type": "PostalAddress", "addressLocality": "Figueres", "addressRegion": "Girona", "addressCountry": "ES" },
-    "areaServed": ["Figueres","Girona","Alt Empordà","Baix Empordà"],
-    "url": "https://www.bujonselectrotecnics.com",
-    "telephone": "+34 000 000 000",
-    "description": "Instal·lacions elèctriques, manteniment i automatització per a indústria i llar."
-  }
-  </script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#home"><img src="assets/logo.svg" alt="Bujons Electrotècnics" height="28"/></a>
-      <nav class="nav" aria-label="Principal">
-        <ul>
-          <li><a data-i18n="nav.home" href="#home">Inici</a></li>
-          <li><a data-i18n="nav.about" href="#about">Qui som</a></li>
-          <li><a data-i18n="nav.services" href="#services">Què fem</a></li>
-          <li><a data-i18n="nav.capabilities" href="#capabilities">Capacitats</a></li>
-          <li><a data-i18n="nav.areas" href="#areas">Zones</a></li>
-          <li><a data-i18n="nav.history" href="#history">Història</a></li>
-          <li><a data-i18n="nav.contact" href="#contact">Contacte</a></li>
-        </ul>
-      </nav>
-      <select id="lang" class="lang-select" aria-label="Canvia l'idioma">
-        <option value="ca">CAT</option>
-        <option value="es">ESP</option>
-        <option value="fr">FRA</option>
-        <option value="en">ENG</option>
-      </select>
-    </div>
-  </header>
-
-  <main id="home" class="container">
-    <section class="hero section">
-      <div>
-        <h1 data-i18n="hero.title">Solucions elèctriques professionals</h1>
-        <p data-i18n="hero.subtitle">Instal·lacions, manteniment i automatització per a indústria i llar a l’Empordà i província de Girona.</p>
-        <a class="btn" href="#contact" data-i18n="hero.cta">Contacta ara</a>
-      </div>
-      <img src="https://picsum.photos/seed/electric/900/560" alt="Instal·lacions elèctriques professionals" />
-    </section>
-
-    <section id="about" class="section">
-      <h2 data-i18n="about.title">Qui som</h2>
-      <p data-i18n="about.p1">Som una empresa familiar d’electricitat a Figueres amb dècades d’experiència. Treballem amb rigor, proximitat i compromís.</p>
-      <p data-i18n="about.p2">Acompanyem el client en tot el cicle: disseny, instal·lació, posada en marxa i manteniment preventiu.</p>
-    </section>
-
-    <section id="services" class="section">
-      <h2 data-i18n="services.title">Què fem</h2>
-      <div class="cards" id="services-cards"></div>
-    </section>
-
-    <section id="capabilities" class="section">
-      <h2 data-i18n="capabilities.title">Capacitats principals</h2>
-      <ul class="checks" id="capabilities-list"></ul>
-    </section>
-
-    <section id="areas" class="section">
-      <h2 data-i18n="areas.title">Zones on treballem</h2>
-      <p data-i18n="areas.p">Figueres, Girona, Alt Empordà, Baix Empordà i voltants.</p>
-    </section>
-
-    <section id="history" class="section">
-      <h2 data-i18n="history.title">Història</h2>
-      <p data-i18n="history.p1">Des dels inicis, hem apostat per la feina ben feta i la innovació responsable.</p>
-      <p data-i18n="history.p2">El nostre recorregut avala la confiança de clients particulars, comerços i indústries.</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2 data-i18n="contact.title">Contacte</h2>
-      <p data-i18n="contact.desc">Explica’ns què necessites i et respondrem el més aviat possible.</p>
-      <form id="contact-form" class="form" novalidate>
-        <div class="field">
-          <label for="name" data-i18n="contact.name">Nom</label>
-          <input id="name" name="name" required minlength="2" />
-          <small class="error" aria-live="polite"></small>
-        </div>
-        <div class="field">
-          <label for="email" data-i18n="contact.email">Correu electrònic</label>
-          <input id="email" name="email" type="email" required />
-          <small class="error" aria-live="polite"></small>
-        </div>
-        <div class="field">
-          <label for="message" data-i18n="contact.message">Missatge</label>
-          <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
-          <small class="error" aria-live="polite"></small>
-        </div>
-        <button class="btn" type="submit" data-i18n="contact.send">Enviar</button>
-        <p id="status" class="status" role="status" hidden>...</p>
-      </form>
-      <p style="margin-top:.8rem">
-        <a class="btn" href="https://wa.me/34000000000" target="_blank" rel="noopener">WhatsApp</a>
-      </p>
-      <div style="margin-top:1rem">
-        <iframe title="Mapa" src="https://maps.google.com/maps?q=Figueres&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%" height="280" style="border:0;border-radius:12px"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Bujons Electrotècnics · <span data-i18n="footer.rights">Tots els drets reservats</span></p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang="ca"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BUJÓNS ELECTROTÈCNICS S.L.</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.png">
+</head><body><header class="site-header"><div class="container navbar">
+<a href="index.html" class="brand"><img src="assets/logo_bujons.png" alt="Bujons" height="46"></a>
+<nav><ul>
+<li><a href="index.html" style="text-decoration:underline">Inici</a></li>
+<li><a href="empresa.html">Empresa</a></li>
+<li><a href="productes-serveis.html">Productes i Serveis</a></li>
+<li><a href="on-som.html">On som</a></li>
+<li><a href="contacte.html">Contacte</a></li>
+</ul></nav>
+<div class="flags"><img src="https://flagcdn.com/w20/es.png" alt="ES"><img src="https://flagcdn.com/w20/fr.png" alt="FR"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></div>
+</div></header>
+<main>
+<section class="hero">
+  <img src="assets/logo_bujons.png" alt="Logo Bujons" class="logo">
+  <h1>BUJÓNS ELECTROTÈCNICS S.L.</h1>
+  <p>Electricitat industrial · Instal·lacions i manteniment · Figueres</p>
+</section>
+<section class="container">
+  <h2>Qui som</h2>
+  <p>Som una empresa familiar d’electricitat a Figueres amb dècades d’experiència. Treballem amb rigor, proximitat i compromís, oferint solucions per a la indústria i el sector residencial.</p>
+  <p>Especialitzats en automatització, manteniment i eficiència energètica, oferim un servei proper i professional per garantir el millor resultat a cada projecte.</p>
+</section>
+<section class="container">
+  <h2>Els nostres serveis</h2>
+  <div class="grid-3">
+    <article><h3>ASSESSORAMENTS</h3><p>Assessorament en instal·lacions hidràuliques i de bombeig amb les marques més reconegudes del mercat. Assessorament energètic i tècnic. Projectes elèctrics. Estudis termogràfics.</p></article>
+    <article><h3>MANTENIMENTS</h3><p>Manteniments elèctrics de baixa tensió. Posta en marxa, manteniment i reparació d’instal·lacions contra incendis. Empresa acreditada i autoritzada. Instal·lacions, reparacions i manteniments d’equips a pressió.</p></article>
+    <article><h3>ALTRES</h3><p>Servei tècnic de KSB ITUR. Muntatge i reparació d’equips electrònics industrials. Bobinatge de motors C/A i C/C.</p></article>
+  </div>
+</section>
+<section class="badges">
+  <img src="assets/certificado_gestiona_total.png" alt="Certificat Gestiona Total">
+  <img src="assets/kesb_servei_oficial.jpg" alt="KSB ITUR Servei Oficial">
+  <img src="assets/enginyers_girona.jpg" alt="Enginyers Girona">
+</section>
+</main>
+<footer><p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p></footer></body></html>

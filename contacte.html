@@ -1,0 +1,40 @@
+<!doctype html><html lang="ca"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacte · Bujons Electrotècnics</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.png">
+</head><body><header class="site-header"><div class="container navbar">
+<a href="index.html" class="brand"><img src="assets/logo_bujons.png" alt="Bujons" height="46"></a>
+<nav><ul>
+<li><a href="index.html">Inici</a></li>
+<li><a href="empresa.html">Empresa</a></li>
+<li><a href="productes-serveis.html">Productes i Serveis</a></li>
+<li><a href="on-som.html">On som</a></li>
+<li><a href="contacte.html" style="text-decoration:underline">Contacte</a></li>
+</ul></nav>
+<div class="flags"><img src="https://flagcdn.com/w20/es.png" alt="ES"><img src="https://flagcdn.com/w20/fr.png" alt="FR"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></div>
+</div></header>
+<main class="container">
+<h1>Contacte</h1>
+<section class="split">
+  <form class="form" id="contact-form" onsubmit="return validateForm(event)">
+    <input type="text" id="name" name="name" placeholder="Nom i cognoms" required>
+    <input type="email" id="email" name="email" placeholder="Correu electrònic" required>
+    <textarea id="message" name="message" rows="5" placeholder="Missatge" required></textarea>
+    <div class="g-recaptcha" data-sitekey="AQUI_LA_TEVA_SITE_KEY"></div>
+    <button type="submit">Enviar</button>
+    <small>En enviar acceptes la nostra <a href="avis-legal.html">política legal</a>.</small>
+  </form>
+  <div>
+    <h2>Dades de contacte</h2>
+    <p><strong>Telèfon:</strong> 972 50 30 71</p>
+    <p><strong>Fax:</strong> 972 50 30 71</p>
+    <p><strong>Mail:</strong> <a href="mailto:info@bujonselectrotecnics.com">info@bujonselectrotecnics.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/34625904101" target="_blank" rel="noopener">+34 625 904 101</a></p>
+    <p><strong>Adreça:</strong> C/ Vicenç Dauner, 8 · 17600 Figueres (Girona)</p>
+  </div>
+</section>
+</main>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="script.js"></script>
+<footer><p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p></footer></body></html>
