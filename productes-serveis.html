@@ -6,6 +6,13 @@
   <title>Productes i Serveis · Bujons Electrotècnics</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/logo_bujons.png">
+  <style>
+    /* anchor offset so sticky header doesn't cover titles */
+    :where(section[id]){ scroll-margin-top: 110px; }
+    /* Subpage hero like "Empresa" */
+    .hero.sub{ padding: 0; }
+    .hero.sub .container{ padding: 2.6rem 0; }
+  </style>
 </head>
 <body>
 <header class="header">
@@ -33,25 +40,20 @@
 </header>
 
 <main>
-  <section class="hero">
+  <!-- HERO (subpage style) -->
+  <section class="hero sub">
     <div class="bg" aria-hidden="true"></div>
-    <div class="container hero-inner">
-      <div>
-        <span class="badge">Catàleg de capacitats</span>
-        <h1>Productes i Serveis</h1>
-        <p class="tag">Un portafolis ampli per cobrir tot el cicle: assessorament, instal·lació, manteniment i legalització.</p>
-        <div class="cta">
-          <a class="btn" href="#serveis">Veure serveis</a>
-          <a class="btn secondary" href="contacte.html">Demana pressupost</a>
-        </div>
-      </div>
-      <div style="position:relative;justify-self:center">
-        <img class="logo-hero" src="assets/logo_bujons.png" alt="Logo Bujons">
-        <div class="glow"></div>
+    <div class="container">
+      <h1>Productes i Serveis</h1>
+      <p class="tag">Assessorament · Instal·lació · Manteniment · Legalització</p>
+      <div class="cta" style="margin-top: .6rem">
+        <a class="btn" href="#serveis">Veure serveis</a>
+        <a class="btn secondary" href="contacte.html">Demana pressupost</a>
       </div>
     </div>
   </section>
 
+  <!-- INTRO -->
   <section class="section container" id="serveis">
     <div class="panel">
       <h2>Com treballem</h2>
@@ -65,6 +67,7 @@
     </div>
   </section>
 
+  <!-- ANCHORS NAV -->
   <section class="section container">
     <div class="cards">
       <a class="card" href="#assessorament"><h3>Assessorament</h3><p>Hidràuliques, bombeig i energia</p></a>
@@ -76,6 +79,7 @@
     </div>
   </section>
 
+  <!-- BLOCS DE SERVEI -->
   <section id="assessorament" class="section container">
     <h2>Assessorament</h2>
     <div class="separator"></div>
@@ -176,11 +180,12 @@
         <p>Experiència i accés a documentació tècnica i procediments de fabricant.</p>
       </div>
       <div class="panel">
-        <img src="assets/kesb_servei_oficial.jpg" alt="KSB ITUR Servei Oficial" style="border-radius:12px">
+        <img src="assets/Bombas-KSB.jpg" alt="KSB ITUR Servei Oficial" style="border-radius:12px">
       </div>
     </div>
   </section>
 
+  <!-- CTA FINAL -->
   <section class="section container">
     <div class="panel">
       <h2>Explica’ns el teu cas</h2>
@@ -193,6 +198,7 @@
     </div>
   </section>
 
+  <!-- PARTNERS STRIP -->
   <section class="partners">
     <img src="assets/certificado_gestiona_total.png" alt="Certificat Gestiona Total">
     <img src="assets/kesb_servei_oficial.jpg" alt="KSB ITUR Servei Oficial">
