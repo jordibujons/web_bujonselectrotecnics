@@ -1,24 +1,53 @@
-<!doctype html><html lang="ca"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contacte · Bujons Electrotècnics</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/logo_bujons.png"></head>
-<body><header class="header"><div class="container header-inner">
-<a class="brand" href="index.html"><img src="assets/logo_bujons.png" alt="Bujons Electrotècnics"><span>Bujons Electrotècnics</span></a>
-<nav class="nav"><ul>
-<li><a href="index.html">Inici</a></li><li><a href="empresa.html">Empresa</a></li><li><a href="productes-serveis.html">Productes i Serveis</a></li><li><a href="on-som.html">On som</a></li><li><a href="contacte.html">Contacte</a></li>
-</ul></nav>
-<div class="flags">
-  <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
-  <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
-  <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
-  <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
-</div>
-</div></header>
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacte · Bujons Electrotècnics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo_bujons.png">
+  <style>
+    :where(section[id]){ scroll-margin-top: 110px; }
+    .hero.sub{ padding: 0; }
+    .hero.sub .container{ padding: 2.6rem 0; position: relative; z-index: 1; }
+    .btn.whatsapp{ background:#25D366; border-color:#1ebe57; color:#04210e; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo_bujons.png" alt="Bujons Electrotècnics">
+      <span>Bujons Electrotècnics</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="productes-serveis.html">Productes i Serveis</a></li>
+        <li><a href="on-som.html">On som</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+      </ul>
+    </nav>
+    <div class="flags" title="Idiomes">
+      <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
+      <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
+      <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
+      <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
+    </div>
+  </div>
+</header>
+
 <main>
-  <section class="hero"><div class="bg" aria-hidden="true"></div>
-    <div class="container" style="padding:2.6rem 0">
-      <h1>Contacte</h1><p class="tag">Parlem del teu projecte</p>
+  <!-- HERO -->
+  <section class="hero sub">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Contacte</h1>
+      <p class="tag">Parlem del teu projecte</p>
     </div>
   </section>
+
   <section class="section container split">
     <div class="panel">
       <form class="form" id="contact-form" onsubmit="return validateForm(event)">
@@ -27,19 +56,29 @@
         <textarea id="message" name="message" placeholder="Missatge" required></textarea>
         <div class="g-recaptcha" data-sitekey="AQUI_LA_TEVA_SITE_KEY"></div>
         <button class="btn" type="submit">Enviar</button>
-        <small>En enviar acceptes la nostra <a href="avis-legal.html">política legal</a>.</small>
+        <small>En enviar acceptes la nostra <a href="avis-legal.html" style="text-decoration:underline">política legal</a>.</small>
       </form>
     </div>
     <div class="panel">
       <h2>Dades de contacte</h2><div class="separator"></div>
-      <p><strong>Telèfon:</strong> 972 50 30 71</p>
-      <p><strong>Fax:</strong> 972 50 30 71</p>
+      <p><strong>Telèfon:</strong> <a href="tel:+34972503071">+34 972 50 30 71</a></p>
+      <p><strong>Fax:</strong> +34 972 50 30 71</p>
       <p><strong>Mail:</strong> <a href="mailto:info@bujonselectrotecnics.com">info@bujonselectrotecnics.com</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/34625904101" target="_blank" rel="noopener">+34 625 904 101</a></p>
+      <p><strong>WhatsApp:</strong></p>
+      <p>
+        <a class="btn whatsapp" href="https://wa.me/34625904101" target="_blank" rel="noopener" aria-label="Obrir WhatsApp">
+          <svg viewBox="0 0 32 32" width="18" height="18" style="vertical-align:-3px;margin-right:.35rem" aria-hidden="true">
+            <path fill="white" d="M19.11 17.47c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.35-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.46-.16 0-.34-.02-.52-.02s-.48.07-.73.34c-.25.27-.95.93-.95 2.26 0 1.32.97 2.6 1.1 2.78.14.18 1.9 2.9 4.6 4.05.64.28 1.14.45 1.53.58.64.2 1.22.17 1.68.1.51-.08 1.59-.65 1.81-1.29.22-.64.22-1.19.16-1.29-.06-.1-.25-.17-.52-.31z"/>
+            <path fill="white" d="M16 3a13 13 0 00-11.23 19.5L3 29l6.7-1.75A13 13 0 1016 3zm7.67 20.67A10.75 10.75 0 1116 26.75h-.01a10.7 10.7 0 005.45-1.52l.39-.23 3.24.86-.4-3.3z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </p>
       <p><strong>Adreça:</strong> C/ Vicenç Dauner, 8 · 17600 Figueres (Girona)</p>
     </div>
   </section>
 </main>
+
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
 async function validateForm(e) {
@@ -51,13 +90,23 @@ async function validateForm(e) {
   if (!name || !email || !message) { alert('Si us plau, omple tots els camps.'); return false; }
   if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse().length === 0) { alert('Marca el reCAPTCHA.'); return false; }
   try {
-    const r = await fetch('https://formspree.io/f/YOUR_ENDPOINT', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ name, email, message }) });
+    const r = await fetch('https://formspree.io/f/YOUR_ENDPOINT', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ name, email, message })
+    });
     if (r.ok) { alert('Missatge enviat!'); f.reset(); if (typeof grecaptcha !== 'undefined') grecaptcha.reset(); }
     else { alert('Hi ha hagut un error en l\'enviament.'); }
   } catch(err) { alert('Hi ha hagut un error en l\'enviament.'); }
   return false;
 }
 </script>
-<footer class="footer"><div class="container"><p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p></div></footer>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p>
+  </div>
+</footer>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
