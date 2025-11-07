@@ -1,43 +1,210 @@
-<!doctype html><html lang="ca"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Productes i Serveis · Bujons Electrotècnics</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/logo_bujons.png"></head>
-<body><header class="header"><div class="container header-inner">
-<a class="brand" href="index.html"><img src="assets/logo_bujons.png" alt="Bujons Electrotècnics"><span>Bujons Electrotècnics</span></a>
-<nav class="nav"><ul>
-<li><a href="index.html">Inici</a></li>
-<li><a href="empresa.html">Empresa</a></li>
-<li><a href="productes-serveis.html">Productes i Serveis</a></li>
-<li><a href="on-som.html">On som</a></li>
-<li><a href="contacte.html">Contacte</a></li>
-</ul></nav>
-<div class="flags">
-  <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
-  <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
-  <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
-  <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
-</div>
-</div></header>
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productes i Serveis · Bujons Electrotècnics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo_bujons.png">
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo_bujons.png" alt="Bujons Electrotècnics">
+      <span>Bujons Electrotècnics</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="productes-serveis.html">Productes i Serveis</a></li>
+        <li><a href="on-som.html">On som</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+      </ul>
+    </nav>
+    <div class="flags" title="Idiomes">
+      <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
+      <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
+      <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
+      <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
+    </div>
+  </div>
+</header>
+
 <main>
   <section class="hero">
     <div class="bg" aria-hidden="true"></div>
-    <div class="container" style="padding:2.6rem 0">
-      <h1>Productes i Serveis</h1>
-      <p class="tag">Solucions per a la indústria i el sector professional</p>
+    <div class="container hero-inner">
+      <div>
+        <span class="badge">Catàleg de capacitats</span>
+        <h1>Productes i Serveis</h1>
+        <p class="tag">Un portafolis ampli per cobrir tot el cicle: assessorament, instal·lació, manteniment i legalització.</p>
+        <div class="cta">
+          <a class="btn" href="#serveis">Veure serveis</a>
+          <a class="btn secondary" href="contacte.html">Demana pressupost</a>
+        </div>
+      </div>
+      <div style="position:relative;justify-self:center">
+        <img class="logo-hero" src="assets/logo_bujons.png" alt="Logo Bujons">
+        <div class="glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="serveis">
+    <div class="panel">
+      <h2>Com treballem</h2>
+      <div class="separator"></div>
+      <p>
+        A <strong>BUJÓNS ELECTROTÈCNICS S.L.</strong> ens caracteritza un <strong>ventall ampli de serveis</strong> amb
+        enfocament 360º: diagnosi i <strong>assessorament tècnic</strong>, <strong>instal·lació</strong> i posada en marxa,
+        <strong>manteniment</strong> i <strong>legalització</strong>. Treballem amb marques de primer nivell i procediments
+        contrastats per garantir <strong>seguretat, eficiència i disponibilitat</strong> dels equips.
+      </p>
     </div>
   </section>
 
   <section class="section container">
-    <h2>Catàleg</h2>
-    <div class="separator"></div>
-    <p>[PENDENT] Enganxa aquí el contingut exacte de “Productes i Serveis”.</p>
     <div class="cards">
-      <div class="card"><h3>Instal·lacions de baixa tensió</h3><p>Quadres, línies i proteccions.</p></div>
-      <div class="card"><h3>Automatització i control</h3><p>Domòtica / KNX i integració.</p></div>
-      <div class="card"><h3>Manteniments</h3><p>Preventius i correctius · Termografia.</p></div>
-      <div class="card"><h3>Il·luminació i eficiència</h3><p>Projectes LED i optimització.</p></div>
+      <a class="card" href="#assessorament"><h3>Assessorament</h3><p>Hidràuliques, bombeig i energia</p></a>
+      <a class="card" href="#instal-lacions"><h3>Instal·lacions i projectes</h3><p>Baixa tensió i industrials</p></a>
+      <a class="card" href="#manteniment"><h3>Manteniment i reparació</h3><p>BT, electrònica i generadors</p></a>
+      <a class="card" href="#pressio"><h3>Equips a pressió</h3><p>Instal·lació, manteniment i legalització</p></a>
+      <a class="card" href="#termografia"><h3>Termografia</h3><p>Inspeccions i informes tècnics</p></a>
+      <a class="card" href="#ksb"><h3>Servei tècnic KSB ITUR</h3><p>Assistència oficial</p></a>
     </div>
   </section>
+
+  <section id="assessorament" class="section container">
+    <h2>Assessorament</h2>
+    <div class="separator"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Instal·lacions hidràuliques i de bombeig</h3>
+        <p>Assessorament amb les marques més reconegudes del mercat. Selecció d’equips, dimensionament i optimització.</p>
+      </div>
+      <div class="card">
+        <h3>Assessorament energètic i tècnic</h3>
+        <p>Auditories, estratègies d’eficiència i propostes de millora amb retorn d’inversió.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="instal-lacions" class="section container">
+    <h2>Instal·lacions i projectes</h2>
+    <div class="separator"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Projectes elèctrics</h3>
+        <p>Enginyeria, memòries, càlculs i direcció d’obra.</p>
+      </div>
+      <div class="card">
+        <h3>Instal·lacions industrials</h3>
+        <p>Línies, proteccions i quadres de baixa tensió, així com instal·lacions d’aigua industrial.</p>
+      </div>
+      <div class="card">
+        <h3>Instal·lacions contra incendis</h3>
+        <p>Posada en marxa, manteniment i reparació. <strong>Empresa acreditada i autoritzada.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="manteniment" class="section container">
+    <h2>Manteniment i reparació</h2>
+    <div class="separator"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Manteniments elèctrics de baixa tensió</h3>
+        <p>Preventius i correctius, amb protocols de seguretat i traçabilitat d’incidències.</p>
+      </div>
+      <div class="card">
+        <h3>Reparació elèctrica/electrònica de maquinària industrial</h3>
+        <p>Diagnosi, reparació in situ o al taller, proves i validació final.</p>
+      </div>
+      <div class="card">
+        <h3>Electro-generadors</h3>
+        <p>Venda, reparació i manteniment d’electro-generadors.</p>
+      </div>
+      <div class="card">
+        <h3>Muntatge i reparació d’equips electrònics industrials</h3>
+        <p>Placa, control i potència · Calibració i verificació funcional.</p>
+      </div>
+      <div class="card">
+        <h3>Bobinatge de motors C/A i C/C</h3>
+        <p>Rebobinat, equilibrat i proves en banc.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pressio" class="section container">
+    <h2>Equips a pressió</h2>
+    <div class="separator"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Instal·lació, reparació i manteniment</h3>
+        <p><strong>Empresa autoritzada i acreditada</strong> per a equips a pressió.</p>
+      </div>
+      <div class="card">
+        <h3>Legalització d’equips a pressió</h3>
+        <p>Gestió documental i tramitació amb organismes competents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="termografia" class="section container">
+    <h2>Termografia i informes</h2>
+    <div class="separator"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Estudis termogràfics</h3>
+        <p>Detecció preventiva d’anomalies en quadres i línies. Propostes de correcció.</p>
+      </div>
+      <div class="card">
+        <h3>Revisions elèctriques de BT amb informes</h3>
+        <p>Inspeccions reglamentàries i emissió d’informes tècnics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ksb" class="section container">
+    <h2>KSB ITUR — Servei tècnic</h2>
+    <div class="separator"></div>
+    <div class="split">
+      <div class="panel">
+        <p><strong>Servei tècnic oficial</strong> per a equips KSB ITUR: diagnosi i reparació, subministrament de recanvis i posada en marxa.</p>
+        <p>Experiència i accés a documentació tècnica i procediments de fabricant.</p>
+      </div>
+      <div class="panel">
+        <img src="assets/kesb_servei_oficial.jpg" alt="KSB ITUR Servei Oficial" style="border-radius:12px">
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="panel">
+      <h2>Explica’ns el teu cas</h2>
+      <div class="separator"></div>
+      <p>Responem ràpid i amb criteri tècnic. Prepararem una proposta ajustada a necessitats i normativa.</p>
+      <div class="cta">
+        <a class="btn" href="contacte.html">Contacta ara</a>
+        <a class="btn secondary" href="on-som.html">Com arribar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners">
+    <img src="assets/certificado_gestiona_total.png" alt="Certificat Gestiona Total">
+    <img src="assets/kesb_servei_oficial.jpg" alt="KSB ITUR Servei Oficial">
+    <img src="assets/enginyers_girona.jpg" alt="Enginyers Girona">
+  </section>
 </main>
-<footer class="footer"><div class="container">
-<p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p>
-</div></footer><script src="script.js"></script></body></html>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
