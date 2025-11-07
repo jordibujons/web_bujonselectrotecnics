@@ -9,9 +9,11 @@
   <style>
     /* anchor offset so sticky header doesn't cover titles */
     :where(section[id]){ scroll-margin-top: 110px; }
+    /* background shouldn't eat clicks */
+    .hero .bg{ pointer-events: none; }
     /* Subpage hero like "Empresa" */
     .hero.sub{ padding: 0; }
-    .hero.sub .container{ padding: 2.6rem 0; }
+    .hero.sub .container{ padding: 2.6rem 0; position: relative; z-index: 1; }
   </style>
 </head>
 <body>
