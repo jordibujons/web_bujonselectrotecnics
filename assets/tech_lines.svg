@@ -1,12 +1,99 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'>
-<defs><linearGradient id='fade' x1='0' y1='0' x2='0' y2='1'>
-<stop offset='0' stop-color='#c21b4a' stop-opacity='0.20'/>
-<stop offset='1' stop-color='#c21b4a' stop-opacity='0.00'/>
-</linearGradient></defs>
-<g fill='none' stroke='url(#fade)' stroke-width='2'>
-<path d='M0,200 C200,150 300,240 500,210 S800,230 1000,200 1300,220 1600,190'/>
-<path d='M0,340 C220,310 320,360 520,330 S820,350 1020,320 1320,345 1600,315'/>
-<path d='M0,480 C240,450 340,510 540,480 S840,500 1040,470 1340,490 1600,465'/>
-<path d='M0,620 C260,595 360,650 560,620 S860,640 1060,610 1360,635 1600,610'/>
-<path d='M0,760 C280,740 380,780 580,760 S880,770 1080,745 1380,760 1600,740'/>
-</g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <!-- Colors -->
+    <style>
+      :root { --accent: #c21b4a; }
+    </style>
+
+    <!-- Soft glow filter for the animated pass -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- A faint vignette to keep edges subtle -->
+    <radialGradient id="vignette" cx="50%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".35"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background fill (kept transparent to layer over your anthracite) -->
+  <rect width="1600" height="900" fill="none"/>
+
+  <!-- BASE NETWORK (continuous faint lines) -->
+  <g stroke="#c21b4a" stroke-opacity=".18" stroke-width="2" fill="none">
+    <!-- horizontal/vertical 90° routes -->
+    <path d="M80 160 H540 V220 H900 V180 H1480" />
+    <path d="M120 260 H480 V340 H820 V300 H1320 V380 H1520" />
+    <path d="M60 420 H520 V480 H760 V420 H1120 V520 H1440" />
+    <path d="M200 560 H600 V640 H940 V560 H1240 V660 H1500" />
+    <path d="M100 720 H560 V780 H980 V720 H1380" />
+
+    <!-- vertical trunks -->
+    <path d="M360 120 V240 H460 V120" />
+    <path d="M720 220 V340 H900 V220" />
+    <path d="M1080 160 V300 H1200 V160" />
+    <path d="M1280 480 V620 H1460 V480" />
+
+    <!-- vias (nodes) -->
+    <g fill="#c21b4a" fill-opacity=".35" stroke="none">
+      <circle cx="540" cy="220" r="3"/>
+      <circle cx="900" cy="180" r="3"/>
+      <circle cx="480" cy="340" r="3"/>
+      <circle cx="820" cy="300" r="3"/>
+      <circle cx="1320" cy="380" r="3"/>
+      <circle cx="520" cy="480" r="3"/>
+      <circle cx="760" cy="420" r="3"/>
+      <circle cx="1120" cy="520" r="3"/>
+      <circle cx="600" cy="640" r="3"/>
+      <circle cx="940" cy="560" r="3"/>
+      <circle cx="1240" cy="660" r="3"/>
+      <circle cx="560" cy="780" r="3"/>
+      <circle cx="980" cy="720" r="3"/>
+    </g>
+  </g>
+
+  <!-- ANIMATED PASS (moving pulses along the same routes) -->
+  <g stroke="#c21b4a" stroke-width="3" fill="none" filter="url(#glow)" stroke-linecap="round" stroke-opacity=".9">
+    <!-- Use long dash + gap; animate dashoffset to simulate current flow -->
+    <g stroke-dasharray="8 120">
+      <path d="M80 160 H540 V220 H900 V180 H1480">
+        <animate attributeName="stroke-dashoffset" values="0;-256" dur="12s" repeatCount="indefinite"/>
+      </path>
+      <path d="M120 260 H480 V340 H820 V300 H1320 V380 H1520">
+        <animate attributeName="stroke-dashoffset" values="0;-256" dur="13s" repeatCount="indefinite"/>
+      </path>
+      <path d="M60 420 H520 V480 H760 V420 H1120 V520 H1440">
+        <animate attributeName="stroke-dashoffset" values="0;-256" dur="11.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M200 560 H600 V640 H940 V560 H1240 V660 H1500">
+        <animate attributeName="stroke-dashoffset" values="0;-256" dur="12.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M100 720 H560 V780 H980 V720 H1380">
+        <animate attributeName="stroke-dashoffset" values="0;-256" dur="10.5s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- trunks -->
+      <path d="M360 120 V240 H460 V120">
+        <animate attributeName="stroke-dashoffset" values="0;-200" dur="9s" repeatCount="indefinite"/>
+      </path>
+      <path d="M720 220 V340 H900 V220">
+        <animate attributeName="stroke-dashoffset" values="0;-200" dur="8.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M1080 160 V300 H1200 V160">
+        <animate attributeName="stroke-dashoffset" values="0;-200" dur="9.5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M1280 480 V620 H1460 V480">
+        <animate attributeName="stroke-dashoffset" values="0;-200" dur="8.8s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- Subtle vignette on top to frame content -->
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>
