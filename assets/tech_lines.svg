@@ -1,0 +1,12 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='900' viewBox='0 0 1600 900'>
+<defs><linearGradient id='fade' x1='0' y1='0' x2='0' y2='1'>
+<stop offset='0' stop-color='#c21b4a' stop-opacity='0.20'/>
+<stop offset='1' stop-color='#c21b4a' stop-opacity='0.00'/>
+</linearGradient></defs>
+<g fill='none' stroke='url(#fade)' stroke-width='2'>
+<path d='M0,200 C200,150 300,240 500,210 S800,230 1000,200 1300,220 1600,190'/>
+<path d='M0,340 C220,310 320,360 520,330 S820,350 1020,320 1320,345 1600,315'/>
+<path d='M0,480 C240,450 340,510 540,480 S840,500 1040,470 1340,490 1600,465'/>
+<path d='M0,620 C260,595 360,650 560,620 S860,640 1060,610 1360,635 1600,610'/>
+<path d='M0,760 C280,740 380,780 580,760 S880,770 1080,745 1380,760 1600,740'/>
+</g></svg>

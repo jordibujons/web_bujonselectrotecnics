@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
-  <rect width="20" height="14" fill="#fcdd09"/>
-  <g fill="#da121a">
-    <rect y="1" width="20" height="1.4"/>
-    <rect y="4.2" width="20" height="1.4"/>
-    <rect y="7.4" width="20" height="1.4"/>
-    <rect y="10.6" width="20" height="1.4"/>
-  </g>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='14' viewBox='0 0 20 14'>
+<rect width='20' height='14' fill='#fcdd09'/>
+<g fill='#da121a'>
+<rect y='1' width='20' height='1.4'/>
+<rect y='4.2' width='20' height='1.4'/>
+<rect y='7.4' width='20' height='1.4'/>
+<rect y='10.6' width='20' height='1.4'/>
+</g></svg>
