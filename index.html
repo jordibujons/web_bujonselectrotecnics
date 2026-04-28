@@ -1,37 +1,38 @@
 <!doctype html><html lang="ca"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bujóns Electrotècnics S.L. — Inici</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/logo_bujons.png"></head>
-<body><header class="header"><div class="container header-inner">
+<body data-page-title="meta.title_home">
+<header class="header"><div class="container header-inner">
 <a class="brand" href="index.html"><img src="assets/logo_bujons.png" alt="Bujons Electrotècnics"><span>Bujons Electrotècnics</span></a>
 <nav class="nav"><ul>
-<li><a href="index.html">Inici</a></li>
-<li><a href="empresa.html">Empresa</a></li>
-<li><a href="productes-serveis.html">Productes i Serveis</a></li>
-<li><a href="on-som.html">On som</a></li>
-<li><a href="contacte.html">Contacte</a></li>
+<li><a href="index.html" data-i18n="nav.home">Inici</a></li>
+<li><a href="empresa.html" data-i18n="nav.company">Empresa</a></li>
+<li><a href="productes-serveis.html" data-i18n="nav.products">Productes i Serveis</a></li>
+<li><a href="on-som.html" data-i18n="nav.location">On som</a></li>
+<li><a href="contacte.html" data-i18n="nav.contact">Contacte</a></li>
 </ul></nav>
 <div class="flags">
-  <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
-  <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
-  <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
-  <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
+  <img src="assets/senyera.svg" alt="CAT" data-lang="ca">
+  <img src="https://flagcdn.com/w20/es.png" alt="ES" data-lang="es">
+  <img src="https://flagcdn.com/w20/fr.png" alt="FR" data-lang="fr">
+  <img src="https://flagcdn.com/w20/gb.png" alt="EN" data-lang="en">
 </div>
 <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
 </div></header>
 
 <nav class="mobile-menu">
 <ul>
-<li><a href="index.html">Inici</a></li>
-<li><a href="empresa.html">Empresa</a></li>
-<li><a href="productes-serveis.html">Productes i Serveis</a></li>
-<li><a href="on-som.html">On som</a></li>
-<li><a href="contacte.html">Contacte</a></li>
+<li><a href="index.html" data-i18n="nav.home">Inici</a></li>
+<li><a href="empresa.html" data-i18n="nav.company">Empresa</a></li>
+<li><a href="productes-serveis.html" data-i18n="nav.products">Productes i Serveis</a></li>
+<li><a href="on-som.html" data-i18n="nav.location">On som</a></li>
+<li><a href="contacte.html" data-i18n="nav.contact">Contacte</a></li>
 </ul>
 <div class="flags-mobile">
-  <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
-  <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
-  <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
-  <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
+  <img src="assets/senyera.svg" alt="CAT" data-lang="ca">
+  <img src="https://flagcdn.com/w20/es.png" alt="ES" data-lang="es">
+  <img src="https://flagcdn.com/w20/fr.png" alt="FR" data-lang="fr">
+  <img src="https://flagcdn.com/w20/gb.png" alt="EN" data-lang="en">
 </div>
 </nav>
 
@@ -40,12 +41,12 @@
     <div class="bg" aria-hidden="true"></div>
     <div class="container hero-inner">
       <div>
-        <span class="badge">Enginyeria i serveis industrials</span>
-        <h1>BUJÓNS ELECTROTÈCNICS S.L.</h1>
-        <p class="tag">Experiència, precisió i confiança. Solucions elèctriques per a entorns industrials i professionals.</p>
+        <span class="badge" data-i18n="home.badge">Enginyeria i serveis industrials</span>
+        <h1 data-i18n="home.title">BUJÓNS ELECTROTÈCNICS S.L.</h1>
+        <p class="tag" data-i18n="home.subtitle">Experiència, precisió i confiança. Solucions elèctriques per a entorns industrials i professionals.</p>
         <div class="cta">
-          <a class="btn" href="contacte.html">Contacta'ns</a>
-          <a class="btn secondary" href="productes-serveis.html">Veure serveis</a>
+          <a class="btn" href="contacte.html" data-i18n="home.cta_contact">Contacta'ns</a>
+          <a class="btn secondary" href="productes-serveis.html" data-i18n="home.cta_services">Veure serveis</a>
         </div>
       </div>
       <div style="position:relative;justify-self:center">
@@ -56,12 +57,21 @@
   </section>
 
   <section class="section container">
-    <h2>Els nostres serveis</h2>
+    <h2 data-i18n="home.services_title">Els nostres serveis</h2>
     <div class="separator"></div>
     <div class="cards">
-      <article class="card"><h3>ASSESSORAMENTS</h3><p>Instal·lacions hidràuliques i de bombeig. Assessorament energètic i tècnic. Projectes elèctrics. Estudis termogràfics.</p></article>
-      <article class="card"><h3>MANTENIMENTS</h3><p>Baixa tensió. Posada en marxa i manteniment d'instal·lacions contra incendis. Equips a pressió: instal·lació, reparació i manteniment.</p></article>
-      <article class="card"><h3>ALTRES</h3><p>Servei tècnic KSB ITUR. Muntatge i reparació d'equips electrònics industrials. Bobinatge de motors C/A i C/C.</p></article>
+      <article class="card">
+        <h3 data-i18n="home.service1_title">ASSESSORAMENTS</h3>
+        <p data-i18n="home.service1_desc">Instal·lacions hidràuliques i de bombeig. Assessorament energètic i tècnic. Projectes elèctrics. Estudis termogràfics.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="home.service2_title">MANTENIMENTS</h3>
+        <p data-i18n="home.service2_desc">Baixa tensió. Posada en marxa i manteniment d'instal·lacions contra incendis. Equips a pressió: instal·lació, reparació i manteniment.</p>
+      </article>
+      <article class="card">
+        <h3 data-i18n="home.service3_title">ALTRES</h3>
+        <p data-i18n="home.service3_desc">Servei tècnic KSB ITUR. Muntatge i reparació d'equips electrònics industrials. Bobinatge de motors C/A i C/C.</p>
+      </article>
     </div>
   </section>
 
@@ -72,5 +82,5 @@
   </section>
 </main>
 <footer class="footer"><div class="container">
-<p>© 2026 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p>
+<p><span data-i18n="footer.copyright">© 2026 Bujons Electrotècnics ·</span> <a href="avis-legal.html" data-i18n="footer.legal">Avís Legal</a></p>
 </div></footer><script src="script.js"></script></body></html>

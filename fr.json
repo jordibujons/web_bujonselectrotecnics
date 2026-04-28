@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title_home": "Bujóns Electrotècnics S.L. — Accueil",
+    "title_contact": "Contact · Bujons Electrotècnics"
+  },
+  "nav": {
+    "home": "Accueil",
+    "company": "Entreprise",
+    "products": "Produits et Services",
+    "location": "Où sommes-nous",
+    "contact": "Contact"
+  },
+  "home": {
+    "badge": "Ingénierie et services industriels",
+    "title": "BUJÓNS ELECTROTÈCNICS S.L.",
+    "subtitle": "Expérience, précision et confiance. Solutions électriques pour environnements industriels et professionnels.",
+    "cta_contact": "Contactez-nous",
+    "cta_services": "Voir les services",
+    "services_title": "Nos services",
+    "service1_title": "CONSEIL",
+    "service1_desc": "Installations hydrauliques et de pompage. Conseil énergétique et technique. Projets électriques. Études thermographiques.",
+    "service2_title": "MAINTENANCE",
+    "service2_desc": "Basse tension. Mise en service et maintenance des installations anti-incendie. Équipements sous pression : installation, réparation et maintenance.",
+    "service3_title": "AUTRES",
+    "service3_desc": "Service technique KSB ITUR. Montage et réparation d'équipements électroniques industriels. Bobinage de moteurs AC et DC."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Parlons de votre projet",
+    "info_title": "Coordonnées",
+    "phone": "Téléphone:",
+    "fax": "Fax:",
+    "email": "Email:",
+    "whatsapp": "WhatsApp:",
+    "address": "Adresse:"
+  },
+  "form": {
+    "name": "Nom et prénom",
+    "email": "Adresse e-mail",
+    "message": "Message",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours...",
+    "legal": "En envoyant, vous acceptez notre",
+    "legal_link": "politique légale",
+    "success": "✅ Message envoyé avec succès !",
+    "error": "❌ Une erreur s'est produite. Veuillez réessayer.",
+    "error_fill": "Veuillez remplir tous les champs.",
+    "error_captcha": "Complétez la vérification de sécurité."
+  },
+  "footer": {
+    "copyright": "© 2026 Bujons Electrotècnics ·",
+    "legal": "Mentions légales"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title_home": "Bujóns Electrotècnics S.L. — Inicio",
+    "title_contact": "Contacto · Bujons Electrotècnics"
+  },
+  "nav": {
+    "home": "Inicio",
+    "company": "Empresa",
+    "products": "Productos y Servicios",
+    "location": "Dónde estamos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "badge": "Ingeniería y servicios industriales",
+    "title": "BUJÓNS ELECTROTÈCNICS S.L.",
+    "subtitle": "Experiencia, precisión y confianza. Soluciones eléctricas para entornos industriales y profesionales.",
+    "cta_contact": "Contáctanos",
+    "cta_services": "Ver servicios",
+    "services_title": "Nuestros servicios",
+    "service1_title": "ASESORAMIENTOS",
+    "service1_desc": "Instalaciones hidráulicas y de bombeo. Asesoramiento energético y técnico. Proyectos eléctricos. Estudios termográficos.",
+    "service2_title": "MANTENIMIENTOS",
+    "service2_desc": "Baja tensión. Puesta en marcha y mantenimiento de instalaciones contra incendios. Equipos a presión: instalación, reparación y mantenimiento.",
+    "service3_title": "OTROS",
+    "service3_desc": "Servicio técnico KSB ITUR. Montaje y reparación de equipos electrónicos industriales. Bobinado de motores AC y DC."
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Hablemos de tu proyecto",
+    "info_title": "Datos de contacto",
+    "phone": "Teléfono:",
+    "fax": "Fax:",
+    "email": "Email:",
+    "whatsapp": "WhatsApp:",
+    "address": "Dirección:"
+  },
+  "form": {
+    "name": "Nombre y apellidos",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "legal": "Al enviar aceptas nuestra",
+    "legal_link": "política legal",
+    "success": "✅ ¡Mensaje enviado correctamente!",
+    "error": "❌ Ha ocurrido un error. Inténtalo de nuevo.",
+    "error_fill": "Por favor, completa todos los campos.",
+    "error_captcha": "Completa la verificación de seguridad."
+  },
+  "footer": {
+    "copyright": "© 2026 Bujons Electrotècnics ·",
+    "legal": "Aviso Legal"
+  }
+}
