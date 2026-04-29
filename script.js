@@ -1,6 +1,6 @@
 /* ============================================================
-   BUJÓNS ELECTROTÈCNICS — script.js v3.0
-   i18n (internacionalización) + menú móvil + formulario
+   BUJÓNS ELECTROTÈCNICS — script.js v3.1
+   i18n + menú móvil + formulario ARREGLADO
    ============================================================ */
 
 (function(){
@@ -29,7 +29,6 @@ const i18n = {
     }catch(e){
       console.error('Error loading translations:', e);
       if(lang !== 'ca'){
-        // Fallback to Catalan
         await this.loadLanguage('ca');
       }
     }
@@ -48,7 +47,6 @@ const i18n = {
       }
     });
     
-    // Update page title if exists
     const titleKey = document.body.getAttribute('data-page-title');
     if(titleKey){
       const title = this.get(titleKey);
@@ -91,7 +89,7 @@ const i18n = {
   }
 };
 
-// ── 2. ANIMACIONES SCROLL (original) ────────────────────────
+// ── 2. ANIMACIONES SCROLL ──────────────────────────────────
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){
@@ -109,7 +107,7 @@ document.querySelectorAll('.card,.panel').forEach(el => {
   io.observe(el);
 });
 
-// ── 3. MENÚ MÓVIL ───────────────────────────────────────────
+// ── 3. MENÚ MÓVIL ──────────────────────────────────────────
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('.mobile-menu');
 
@@ -128,7 +126,6 @@ if(toggle && menu){
     });
   });
   
-  // Close on outside click
   document.addEventListener('click', e => {
     if(!toggle.contains(e.target) && !menu.contains(e.target)){
       menu.classList.remove('open');
@@ -138,7 +135,7 @@ if(toggle && menu){
   });
 }
 
-// ── 4. FORMULARIO DE CONTACTO (arreglado) ───────────────────
+// ── 4. FORMULARIO (ARREGLADO CON DEBUG) ────────────────────
 const form = document.getElementById('contact-form');
 if(form){
   form.addEventListener('submit', async (e) => {
@@ -148,6 +145,11 @@ if(form){
     const email = form.email.value.trim();
     const message = form.message.value.trim();
     
+    console.log('📧 Form submission started');
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message length:', message.length);
+    
     if(!name || !email || !message){
       alert(i18n.get('form.error_fill') || 'Si us plau, omple tots els camps.');
       return;
@@ -155,9 +157,12 @@ if(form){
     
     // Get Turnstile token
     let token = null;
-    const turnstileResponse = form.querySelector('[name="cf-turnstile-response"]');
-    if(turnstileResponse){
-      token = turnstileResponse.value;
+    const turnstileInput = document.querySelector('[name="cf-turnstile-response"]');
+    if(turnstileInput){
+      token = turnstileInput.value;
+      console.log('🔒 Turnstile token found:', token ? 'YES (length: ' + token.length + ')' : 'NO');
+    }else{
+      console.warn('⚠️ Turnstile input not found in DOM');
     }
     
     if(!token){
@@ -170,6 +175,17 @@ if(form){
     btn.disabled = true;
     btn.textContent = i18n.get('form.sending') || 'Enviant...';
     
+    // Formspree payload
+    const payload = {
+      name: name,
+      email: email,
+      message: message,
+      _subject: `Nou missatge de ${name}`,
+      _replyto: email
+    };
+    
+    console.log('📤 Sending to Formspree:', payload);
+    
     try {
       const res = await fetch('https://formspree.io/f/mzdylwoe', {
         method: 'POST',
@@ -177,29 +193,25 @@ if(form){
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message,
-          'g-recaptcha-response': token,  // Formspree también acepta este nombre
-          '_subject': `Nou missatge de ${name}`,
-          '_replyto': email
-        })
+        body: JSON.stringify(payload)
       });
       
+      console.log('📬 Response status:', res.status);
+      
       const data = await res.json();
+      console.log('📬 Response data:', data);
       
       if(res.ok){
         alert(i18n.get('form.success') || '✅ Missatge enviat correctament!');
         form.reset();
         if(window.turnstile) window.turnstile.reset();
       }else{
-        console.error('Formspree error:', data);
-        alert(i18n.get('form.error') || '❌ Hi ha hagut un error. Torna-ho a provar.');
+        console.error('❌ Formspree error:', data);
+        alert(i18n.get('form.error') || '❌ Hi ha hagut un error. Comprova la consola (F12).');
       }
     }catch(err){
-      console.error('Form submission error:', err);
-      alert(i18n.get('form.error') || '❌ Hi ha hagut un error. Torna-ho a provar.');
+      console.error('❌ Network/fetch error:', err);
+      alert(i18n.get('form.error') || '❌ Error de connexió. Comprova la consola (F12).');
     }finally{
       btn.disabled = false;
       btn.textContent = originalText;
