@@ -1,7 +1,8 @@
 {
   "meta": {
     "title_home": "Bujóns Electrotècnics S.L. — Accueil",
-    "title_contact": "Contact · Bujons Electrotècnics"
+    "title_contact": "Contact · Bujons Electrotècnics",
+    "title_legal": "Mentions légales · Bujons Electrotècnics"
   },
   "nav": {
     "home": "Accueil",
@@ -43,9 +44,25 @@
     "legal": "En envoyant, vous acceptez notre",
     "legal_link": "politique légale",
     "success": "✅ Message envoyé avec succès !",
-    "error": "❌ Une erreur s'est produite. Veuillez réessayer.",
+    "error": "❌ Une erreur est survenue. Vérifiez la console (F12).",
     "error_fill": "Veuillez remplir tous les champs.",
     "error_captcha": "Complétez la vérification de sécurité."
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "section1": "Informations générales",
+    "owner": "Titulaire:",
+    "address_label": "Adresse:",
+    "phone_label": "Téléphone:",
+    "section2": "Conditions d'utilisation",
+    "conditions_p1": "L'accès et l'utilisation de ce site web impliquent l'acceptation expresse des présentes conditions d'utilisation. L'utilisateur s'engage à faire un usage correct du site web et des contenus, conformément à la législation en vigueur.",
+    "conditions_p2": "Bujóns Electrotècnics S.L. se réserve le droit de modifier le contenu du site web sans préavis et sans aucune limitation.",
+    "section3": "Protection des données",
+    "privacy_p1": "Les données personnelles fournies via les formulaires du site seront traitées avec la plus grande confidentialité et conformément au Règlement Général sur la Protection des Données (RGPD).",
+    "privacy_p2": "L'utilisateur peut exercer ses droits d'accès, de rectification, de suppression, d'opposition, de limitation et de portabilité en envoyant un e-mail à info@bujonselectrotecnics.com.",
+    "section4": "Propriété intellectuelle",
+    "ip_p1": "Tous les contenus de ce site web (textes, images, marques, logos) sont la propriété de Bujóns Electrotècnics S.L. ou de tiers ayant autorisé leur utilisation.",
+    "ip_p2": "La reproduction, la distribution ou la modification des contenus sans autorisation expresse est interdite."
   },
   "footer": {
     "copyright": "© 2026 Bujons Electrotècnics ·",

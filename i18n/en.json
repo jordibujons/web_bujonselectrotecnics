@@ -1,7 +1,8 @@
 {
   "meta": {
     "title_home": "Bujóns Electrotècnics S.L. — Home",
-    "title_contact": "Contact · Bujons Electrotècnics"
+    "title_contact": "Contact · Bujons Electrotècnics",
+    "title_legal": "Legal Notice · Bujons Electrotècnics"
   },
   "nav": {
     "home": "Home",
@@ -43,9 +44,25 @@
     "legal": "By sending you accept our",
     "legal_link": "legal policy",
     "success": "✅ Message sent successfully!",
-    "error": "❌ An error occurred. Please try again.",
+    "error": "❌ An error occurred. Check the console (F12).",
     "error_fill": "Please fill in all fields.",
     "error_captcha": "Complete the security verification."
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "section1": "General information",
+    "owner": "Owner:",
+    "address_label": "Address:",
+    "phone_label": "Phone:",
+    "section2": "Terms of use",
+    "conditions_p1": "Access to and use of this website implies express acceptance of these terms of use. The user agrees to make proper use of the website and its contents, in accordance with applicable law.",
+    "conditions_p2": "Bujóns Electrotècnics S.L. reserves the right to modify the website content without prior notice and without any limitation.",
+    "section3": "Data protection",
+    "privacy_p1": "Personal data provided through the website forms will be treated with the utmost confidentiality and in accordance with the General Data Protection Regulation (GDPR).",
+    "privacy_p2": "Users may exercise their rights of access, rectification, deletion, opposition, limitation and portability by sending an email to info@bujonselectrotecnics.com.",
+    "section4": "Intellectual property",
+    "ip_p1": "All contents of this website (texts, images, trademarks, logos) are the property of Bujóns Electrotècnics S.L. or third parties who have authorized their use.",
+    "ip_p2": "Reproduction, distribution or modification of the contents without express authorization is prohibited."
   },
   "footer": {
     "copyright": "© 2026 Bujons Electrotècnics ·",
