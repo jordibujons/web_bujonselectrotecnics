@@ -6,7 +6,25 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 600px at 10% -10%, #151a1f 0%, transparent 60%), linear-gradient(180deg,var(--bg),var(--bg-2)); color:var(--ink); line-height:1.65}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:radial-gradient(1200px 600px at 10% -10%, #151a1f 0%, transparent 60%), linear-gradient(180deg,var(--bg),var(--bg-2));
+  color:var(--ink);
+  line-height:1.65;
+  position:relative;
+}
+/* BACKGROUND ANIMADO EN TODA LA PÁGINA */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background: url('assets/tech_lines_pcb_animated.svg') center/cover no-repeat;
+  opacity:.6;
+  mix-blend-mode:screen;
+  pointer-events:none;
+  z-index:0;
+}
+main{position:relative;z-index:1}
 img{max-width:100%;height:auto}
 a{color:#fff;text-decoration:none}
 .container{width:min(95%,1180px);margin-inline:auto}
@@ -21,7 +39,7 @@ a{color:#fff;text-decoration:none}
 .flags{display:flex;gap:.5rem;margin-left:1rem}
 .flags img{width:20px;height:14px;border-radius:3px;border:1px solid #3b424d;}
 .hero{position:relative; overflow:hidden}
-.hero .bg{position:absolute; inset:0; background: url('assets/tech_lines_pcb_animated.svg') center/cover no-repeat; opacity:.6; mix-blend:screen}
+.hero .bg{display:none}
 .hero-inner{position:relative; z-index:1; display:grid; grid-template-columns:1.1fr .9fr; gap:2.2rem; align-items:center; padding:4rem 0}
 @media (max-width: 980px){ .hero-inner{grid-template-columns:1fr; padding:3rem 0}}
 h1{font:800 clamp(1.8rem,2vw+1.4rem,2.6rem)/1.1 Poppins; margin:0 0 .4rem; text-shadow: 0 8px 40px rgba(0,0,0,.45)}
@@ -47,14 +65,12 @@ h1{font:800 clamp(1.8rem,2vw+1.4rem,2.6rem)/1.1 Poppins; margin:0 0 .4rem; text-
 @media (max-width: 900px){ .split{grid-template-columns:1fr} }
 .partners{display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap;padding:1.2rem;background:#0f1419;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .partners img{max-height:70px;filter:saturate(1.05)}
-.footer{background:#0c1117;border-top:1px solid var(--line);color:#cad7e4;text-align:center;padding:1rem 0}
+.footer{background:#0c1117;border-top:1px solid var(--line);color:#cad7e4;text-align:center;padding:1rem 0;position:relative;z-index:1}
 .footer a{text-decoration:underline}
 .form{display:grid;gap:1rem;max-width:560px}
 input,textarea{width:100%;padding:.7rem;border:1px solid #2c3440;background:#11161b;color:#e7ecf2;border-radius:10px;font:inherit}
 textarea{min-height:140px}
 .map{border:0;width:100%;height:360px;border-radius:12px;filter:drop-shadow(0 8px 26px rgba(0,0,0,.35))}
-
-/* ── MOBILE MENU (centrado perfecto del hamburguesa) ── */
 .nav-toggle{
   display:none;
   flex-direction:column;

@@ -7,12 +7,10 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/logo_bujons.png">
   <style>
+    :where(section[id]){ scroll-margin-top: 110px; }
     .hero.sub{ padding: 0; }
     .hero.sub .container{ padding: 2.6rem 0; position: relative; z-index: 1; }
-    .legal-content{max-width:760px;margin:0 auto;padding:2rem 0 4rem}
-    .legal-content h2{font:700 1.1rem/1.2 Poppins;color:var(--brand);margin:2rem 0 .5rem;text-transform:uppercase;letter-spacing:.05em}
-    .legal-content p{color:var(--muted);font-size:.9rem;line-height:1.75;margin-bottom:.6rem}
-    .legal-content strong{color:var(--ink)}
+    .legal p{ margin: .4rem 0 .8rem; }
   </style>
 </head>
 <body data-page-title="meta.title_legal">
@@ -62,29 +60,43 @@
     <div class="bg" aria-hidden="true"></div>
     <div class="container">
       <h1 data-i18n="legal.title">Avís Legal</h1>
+      <p class="tag" data-i18n="legal.subtitle">Informació legal i condicions generals d'ús</p>
     </div>
   </section>
 
-  <section class="container legal-content">
-    <h2 data-i18n="legal.section1">Informació general</h2>
-    <p><strong data-i18n="legal.owner">Titular:</strong> BUJÓNS ELECTROTÈCNICS S.L.</p>
-    <p><strong>NIF:</strong> B17435862</p>
-    <p><strong data-i18n="legal.address_label">Adreça:</strong> C/ Vicenç Dauner, 8 · 17600 Figueres (Girona)</p>
-    <p><strong data-i18n="legal.phone_label">Telèfon:</strong> +34 972 50 30 71</p>
-    <p><strong>Email:</strong> info@bujonselectrotecnics.com</p>
-
-    <h2 data-i18n="legal.section2">Condicions d'ús</h2>
-    <p data-i18n="legal.conditions_p1">L'accés i ús d'aquest lloc web implica l'acceptació expressa de les presents condicions d'ús. L'usuari es compromet a fer un ús correcte del lloc web i dels continguts, d'acord amb la legislació vigent.</p>
-    <p data-i18n="legal.conditions_p2">Bujóns Electrotècnics S.L. es reserva el dret de modificar el contingut del lloc web sense previ avís i sense cap mena de limitació.</p>
-
-    <h2 data-i18n="legal.section3">Protecció de dades</h2>
-    <p data-i18n="legal.privacy_p1">Les dades personals facilitades a través dels formularis del web seran tractades amb la màxima confidencialitat i d'acord amb el Reglament General de Protecció de Dades (RGPD).</p>
-    <p data-i18n="legal.privacy_p2">L'usuari pot exercir els seus drets d'accés, rectificació, supressió, oposició, limitació i portabilitat enviant un correu electrònic a info@bujonselectrotecnics.com.</p>
-
-    <h2 data-i18n="legal.section4">Propietat intel·lectual</h2>
-    <p data-i18n="legal.ip_p1">Tots els continguts d'aquest lloc web (textos, imatges, marques, logotips) són propietat de Bujóns Electrotècnics S.L. o de tercers que han autoritzat el seu ús.</p>
-    <p data-i18n="legal.ip_p2">Queda prohibida la reproducció, distribució o modificació dels continguts sense autorització expressa.</p>
+  <section class="section container">
+    <div class="panel legal">
+      <h2 data-i18n="legal.section1">Identificació del titular</h2>
+      <div class="separator"></div>
+      <p data-i18n="legal.intro">En compliment de l'article 10 de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i de Comerç Electrònic (LSSICE), es faciliten les dades identificatives del titular d'aquest lloc web.</p>
+      <p><strong data-i18n="legal.denomination">Denominació social:</strong> BUJÓNS ELECTROTÈCNICS, S.L.</p>
+      <p><strong>NIF:</strong> B17981358</p>
+      <p><strong data-i18n="legal.address_label">Domicili social:</strong> C/ Vicenç Dauner, 8 – 17600 Figueres (Girona)</p>
+      <p><strong data-i18n="legal.email_label">Correu electrònic:</strong> <a href="mailto:info@bujonselectrotecnics.com">info@bujonselectrotecnics.com</a></p>
+      <p><strong data-i18n="legal.phone_label">Telèfon:</strong> +34 972 50 30 71 · <strong data-i18n="legal.fax_label">Fax:</strong> +34 972 50 30 71</p>
+      <p><strong data-i18n="legal.registry_label">Dades registrals:</strong> <span data-i18n="legal.registry_text">BUJÓNS ELECTROTÈCNICS, S.L., societat limitada constituïda a Figueres l'any 2007, inscrita al Registre Mercantil de Girona, Tomo 2650, Foli 23, Fulla GI-45960, Inscripció 1a.</span></p>
+    </div>
   </section>
+
+  <section class="section container">
+    <div class="panel legal">
+      <h2 data-i18n="legal.section2">Condicions generals d'ús</h2>
+      <div class="separator"></div>
+      <p data-i18n="legal.conditions_p1">Aquest lloc web ha estat creat per BUJÓNS ELECTROTÈCNICS, S.L. amb finalitats informatives i d'ús exclusivament personal per part dels usuaris.</p>
+      <p data-i18n="legal.conditions_p2">L'accés i la navegació impliquen l'acceptació plena de les presents condicions generals d'ús i de totes les advertències legals que s'hi puguin incorporar. L'usuari es compromet a fer-ne un ús adequat, conforme a la legislació vigent i als bons costums.</p>
+      <p data-i18n="legal.conditions_p3">L'accés a aquest lloc web és responsabilitat exclusiva dels usuaris i no implica l'establiment de cap relació comercial entre BUJÓNS ELECTROTÈCNICS, S.L. i l'usuari.</p>
+      <p data-i18n="legal.conditions_p4">Els serveis o productes que es puguin oferir a través d'aquest espai poden estar subjectes a condicions particulars que, segons el cas, substituiran, completaran o modificaran aquestes condicions generals. En aquests supòsits, s'informarà degudament l'usuari abans de la seva aplicació.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="panel legal">
+      <h2 data-i18n="legal.section3">Drets i actualitzacions</h2>
+      <div class="separator"></div>
+      <p data-i18n="legal.updates_text">BUJÓNS ELECTROTÈCNICS, S.L. es reserva el dret de modificar o actualitzar els continguts, el disseny o les condicions d'accés a aquest lloc web en qualsevol moment i sense avís previ, amb l'objectiu de mantenir la informació al dia i adaptada a la normativa vigent.</p>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">

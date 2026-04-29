@@ -1,12 +1,10 @@
 /* ============================================================
-   BUJÓNS ELECTROTÈCNICS — script.js v3.1
-   i18n + menú móvil + formulario ARREGLADO
+   BUJÓNS ELECTROTÈCNICS — script.js DEFINITIVO
    ============================================================ */
 
 (function(){
 'use strict';
 
-// ── 1. SISTEMA i18n ─────────────────────────────────────────
 const i18n = {
   currentLang: localStorage.getItem('lang') || 'ca',
   translations: {},
@@ -25,12 +23,10 @@ const i18n = {
       this.translations = await res.json();
       this.currentLang = lang;
       localStorage.setItem('lang', lang);
-      document.documentElement.lang = lang === 'ca' ? 'ca' : lang === 'es' ? 'es' : lang === 'fr' ? 'fr' : 'en';
+      document.documentElement.lang = lang;
     }catch(e){
       console.error('Error loading translations:', e);
-      if(lang !== 'ca'){
-        await this.loadLanguage('ca');
-      }
+      if(lang !== 'ca') await this.loadLanguage('ca');
     }
   },
   
@@ -89,7 +85,6 @@ const i18n = {
   }
 };
 
-// ── 2. ANIMACIONES SCROLL ──────────────────────────────────
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){
@@ -107,7 +102,6 @@ document.querySelectorAll('.card,.panel').forEach(el => {
   io.observe(el);
 });
 
-// ── 3. MENÚ MÓVIL ──────────────────────────────────────────
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('.mobile-menu');
 
@@ -135,7 +129,6 @@ if(toggle && menu){
   });
 }
 
-// ── 4. FORMULARIO (ARREGLADO CON DEBUG) ────────────────────
 const form = document.getElementById('contact-form');
 if(form){
   form.addEventListener('submit', async (e) => {
@@ -146,23 +139,17 @@ if(form){
     const message = form.message.value.trim();
     
     console.log('📧 Form submission started');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message length:', message.length);
     
     if(!name || !email || !message){
       alert(i18n.get('form.error_fill') || 'Si us plau, omple tots els camps.');
       return;
     }
     
-    // Get Turnstile token
     let token = null;
     const turnstileInput = document.querySelector('[name="cf-turnstile-response"]');
     if(turnstileInput){
       token = turnstileInput.value;
-      console.log('🔒 Turnstile token found:', token ? 'YES (length: ' + token.length + ')' : 'NO');
-    }else{
-      console.warn('⚠️ Turnstile input not found in DOM');
+      console.log('🔒 Turnstile token:', token ? 'OK' : 'MISSING');
     }
     
     if(!token){
@@ -175,43 +162,36 @@ if(form){
     btn.disabled = true;
     btn.textContent = i18n.get('form.sending') || 'Enviant...';
     
-    // Formspree payload
-    const payload = {
-      name: name,
-      email: email,
-      message: message,
-      _subject: `Nou missatge de ${name}`,
-      _replyto: email
-    };
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+    formData.append('cf-turnstile-response', token);
+    formData.append('_subject', `Nou missatge de ${name}`);
     
-    console.log('📤 Sending to Formspree:', payload);
+    console.log('📤 Sending to Formspree...');
     
     try {
       const res = await fetch('https://formspree.io/f/mzdylwoe', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
+        body: formData,
+        headers: {'Accept': 'application/json'}
       });
       
-      console.log('📬 Response status:', res.status);
-      
+      console.log('📬 Response:', res.status);
       const data = await res.json();
-      console.log('📬 Response data:', data);
       
       if(res.ok){
-        alert(i18n.get('form.success') || '✅ Missatge enviat correctament!');
+        alert(i18n.get('form.success') || '✅ Missatge enviat!');
         form.reset();
         if(window.turnstile) window.turnstile.reset();
       }else{
-        console.error('❌ Formspree error:', data);
-        alert(i18n.get('form.error') || '❌ Hi ha hagut un error. Comprova la consola (F12).');
+        console.error('❌ Error:', data);
+        alert(i18n.get('form.error') || '❌ Error: ' + (data.error || 'Unknown'));
       }
     }catch(err){
-      console.error('❌ Network/fetch error:', err);
-      alert(i18n.get('form.error') || '❌ Error de connexió. Comprova la consola (F12).');
+      console.error('❌ Network error:', err);
+      alert(i18n.get('form.error') || '❌ Error de connexió');
     }finally{
       btn.disabled = false;
       btn.textContent = originalText;
@@ -219,7 +199,6 @@ if(form){
   });
 }
 
-// ── INIT ────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   i18n.init();
 });

@@ -1,27 +1,45 @@
 <!doctype html><html lang="ca"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>On som · Bujons Electrotècnics</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="assets/logo_bujons.png"></head>
-<body><header class="header"><div class="container header-inner">
+<body data-page-title="meta.title_location"><header class="header"><div class="container header-inner">
 <a class="brand" href="index.html"><img src="assets/logo_bujons.png" alt="Bujons Electrotècnics"><span>Bujons Electrotècnics</span></a>
 <nav class="nav"><ul>
-<li><a href="index.html">Inici</a></li>
-<li><a href="empresa.html">Empresa</a></li>
-<li><a href="productes-serveis.html">Productes i Serveis</a></li>
-<li><a href="on-som.html">On som</a></li>
-<li><a href="contacte.html">Contacte</a></li>
+<li><a href="index.html" data-i18n="nav.home">Inici</a></li>
+<li><a href="empresa.html" data-i18n="nav.company">Empresa</a></li>
+<li><a href="productes-serveis.html" data-i18n="nav.products">Productes i Serveis</a></li>
+<li><a href="on-som.html" data-i18n="nav.location">On som</a></li>
+<li><a href="contacte.html" data-i18n="nav.contact">Contacte</a></li>
 </ul></nav>
 <div class="flags">
-  <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
-  <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
-  <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
-  <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
+  <img src="assets/senyera.svg" alt="CAT" data-lang="ca">
+  <img src="https://flagcdn.com/w20/es.png" alt="ES" data-lang="es">
+  <img src="https://flagcdn.com/w20/fr.png" alt="FR" data-lang="fr">
+  <img src="https://flagcdn.com/w20/gb.png" alt="EN" data-lang="en">
 </div>
+<button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
 </div></header>
+
+<nav class="mobile-menu">
+<ul>
+<li><a href="index.html" data-i18n="nav.home">Inici</a></li>
+<li><a href="empresa.html" data-i18n="nav.company">Empresa</a></li>
+<li><a href="productes-serveis.html" data-i18n="nav.products">Productes i Serveis</a></li>
+<li><a href="on-som.html" data-i18n="nav.location">On som</a></li>
+<li><a href="contacte.html" data-i18n="nav.contact">Contacte</a></li>
+</ul>
+<div class="flags-mobile">
+  <img src="assets/senyera.svg" alt="CAT" data-lang="ca">
+  <img src="https://flagcdn.com/w20/es.png" alt="ES" data-lang="es">
+  <img src="https://flagcdn.com/w20/fr.png" alt="FR" data-lang="fr">
+  <img src="https://flagcdn.com/w20/gb.png" alt="EN" data-lang="en">
+</div>
+</nav>
+
 <main>
   <section class="hero">
     <div class="bg" aria-hidden="true"></div>
     <div class="container" style="padding:2.6rem 0">
-      <h1>On som</h1>
+      <h1 data-i18n="location.title">On som</h1>
       <p class="tag">C/ Vicenç Dauner, 8 · 17600 Figueres (Girona)</p>
     </div>
   </section>
@@ -33,5 +51,5 @@
   </section>
 </main>
 <footer class="footer"><div class="container">
-<p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p>
+<p><span data-i18n="footer.copyright">© 2026 Bujons Electrotècnics ·</span> <a href="avis-legal.html" data-i18n="footer.legal">Avís Legal</a></p>
 </div></footer><script src="script.js"></script></body></html>

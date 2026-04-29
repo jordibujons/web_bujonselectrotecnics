@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/logo_bujons.png">
 </head>
-<body>
+<body data-page-title="meta.title_company">
 <header class="header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
@@ -16,125 +16,98 @@
     </a>
     <nav class="nav" aria-label="Principal">
       <ul>
-        <li><a href="index.html">Inici</a></li>
-        <li><a href="empresa.html">Empresa</a></li>
-        <li><a href="productes-serveis.html">Productes i Serveis</a></li>
-        <li><a href="on-som.html">On som</a></li>
-        <li><a href="contacte.html">Contacte</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Inici</a></li>
+        <li><a href="empresa.html" data-i18n="nav.company">Empresa</a></li>
+        <li><a href="productes-serveis.html" data-i18n="nav.products">Productes i Serveis</a></li>
+        <li><a href="on-som.html" data-i18n="nav.location">On som</a></li>
+        <li><a href="contacte.html" data-i18n="nav.contact">Contacte</a></li>
       </ul>
     </nav>
     <div class="flags" title="Idiomes">
-      <a href="index.html"><img src="assets/senyera.svg" alt="CAT"></a>
-      <a href="index-es.html"><img src="https://flagcdn.com/w20/es.png" alt="ES"></a>
-      <a href="index-fr.html"><img src="https://flagcdn.com/w20/fr.png" alt="FR"></a>
-      <a href="index-en.html"><img src="https://flagcdn.com/w20/gb.png" alt="EN"></a>
+      <img src="assets/senyera.svg" alt="CAT" data-lang="ca">
+      <img src="https://flagcdn.com/w20/es.png" alt="ES" data-lang="es">
+      <img src="https://flagcdn.com/w20/fr.png" alt="FR" data-lang="fr">
+      <img src="https://flagcdn.com/w20/gb.png" alt="EN" data-lang="en">
     </div>
+    <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<nav class="mobile-menu">
+<ul>
+<li><a href="index.html" data-i18n="nav.home">Inici</a></li>
+<li><a href="empresa.html" data-i18n="nav.company">Empresa</a></li>
+<li><a href="productes-serveis.html" data-i18n="nav.products">Productes i Serveis</a></li>
+<li><a href="on-som.html" data-i18n="nav.location">On som</a></li>
+<li><a href="contacte.html" data-i18n="nav.contact">Contacte</a></li>
+</ul>
+<div class="flags-mobile">
+  <img src="assets/senyera.svg" alt="CAT" data-lang="ca">
+  <img src="https://flagcdn.com/w20/es.png" alt="ES" data-lang="es">
+  <img src="https://flagcdn.com/w20/fr.png" alt="FR" data-lang="fr">
+  <img src="https://flagcdn.com/w20/gb.png" alt="EN" data-lang="en">
+</div>
+</nav>
+
 <main>
-  <!-- HERO -->
   <section class="hero">
     <div class="bg" aria-hidden="true"></div>
     <div class="container" style="padding:2.6rem 0">
-      <h1>Empresa</h1>
-      <p class="tag">El nostre equip i la nostra història</p>
+      <h1 data-i18n="company.title">Empresa</h1>
+      <p class="tag" data-i18n="company.subtitle">El nostre equip i la nostra història</p>
     </div>
   </section>
 
-  <!-- EL NOSTRE EQUIP -->
   <section class="section container split">
     <div class="panel">
-      <h2>El nostre equip</h2>
+      <h2 data-i18n="company.team_title">El nostre equip</h2>
       <div class="separator"></div>
-      <p>
-        Els nostres projectes es duen a terme amb <strong>equips multidisciplinaris</strong> i, quan cal, amb la
-        <strong>col·laboració d’investigadors externs</strong> de reconegut prestigi. Aquesta combinació ens permet
-        abordar cada repte amb una mirada integral i orientada a resultats.
-      </p>
-      <p>
-        A <strong>BUJÓNS ELECTROTÈCNICS S.L.</strong> comptem amb professionals <strong>competents, compromesos i
-        experimentats</strong>, formats en les últimes tecnologies i procediments de qualitat. Compartim una cultura
-        de feina clara: rigor tècnic, seguretat, i proximitat amb el client.
-      </p>
-      <p>
-        Al capdavant de l’empresa hi ha <strong>Miquel Bujóns Bach</strong>, <em>enginyer tècnic industrial</em> i
-        <strong>director gerent</strong>, que impulsa l’evolució contínua de l’organització i la seva vocació de servei.
-      </p>
+      <p data-i18n="company.team_p1">Els nostres projectes es duen a terme amb equips multidisciplinaris i, quan cal, amb la col·laboració d'investigadors externs de reconegut prestigi. Aquesta combinació ens permet abordar cada repte amb una mirada integral i orientada a resultats.</p>
+      <p data-i18n="company.team_p2">A BUJÓNS ELECTROTÈCNICS S.L. comptem amb professionals competents, compromesos i experimentats, formats en les últimes tecnologies i procediments de qualitat. Compartim una cultura de feina clara: rigor tècnic, seguretat, i proximitat amb el client.</p>
+      <p data-i18n="company.team_p3">Al capdavant de l'empresa hi ha Miquel Bujóns Bach, enginyer tècnic industrial i director gerent, que impulsa l'evolució contínua de l'organització i la seva vocació de servei.</p>
     </div>
     <div class="panel">
       <img src="assets/francesc_miquel.jpg" alt="Francesc i Miquel — direcció de l'empresa" style="border-radius:12px">
     </div>
   </section>
 
-  <!-- LA NOSTRA HISTÒRIA (PART 1) -->
   <section class="section container split">
     <div class="panel">
       <img src="assets/foto_3_operaris.jpg" alt="Els inicis del taller — operaris" style="border-radius:12px">
     </div>
     <div class="panel">
-      <h2>La nostra història</h2>
+      <h2 data-i18n="company.history_title">La nostra història</h2>
       <div class="separator"></div>
-      <p>
-        L’empresa va ser fundada l’any <strong>1936</strong> pel <strong>Sr. Miquel Bujóns Calvet</strong>, centrant-se
-        en la reparació i instal·lació de <strong>motors elèctrics</strong> i en la part elèctrica de l’automòbil.
-        El taller es va situar a la històrica <strong>Plaça d’Anselm Clavé</strong> —avui <strong>Plaça Triangular</strong>—
-        i va romandre actiu durant tots els anys de la <strong>Guerra Civil</strong>.
-      </p>
-      <p>
-        A partir de <strong>1945</strong>, es deixa l’elèctrica de l’automòbil per dedicar-se plenament a la
-        <strong>reparació i muntatge de motors elèctrics</strong> i <strong>grups bomba</strong>, sota la direcció de
-        <strong>Francesc Bujóns</strong>.
-      </p>
+      <p data-i18n="company.history_p1">L'empresa va ser fundada l'any 1936 pel Sr. Miquel Bujóns Calvet, centrant-se en la reparació i instal·lació de motors elèctrics i en la part elèctrica de l'automòbil. El taller es va situar a la històrica Plaça d'Anselm Clavé —avui Plaça Triangular— i va romandre actiu durant tots els anys de la Guerra Civil.</p>
+      <p data-i18n="company.history_p2">A partir de 1945, es deixa l'elèctrica de l'automòbil per dedicar-se plenament a la reparació i muntatge de motors elèctrics i grups bomba, sota la direcció de Francesc Bujóns.</p>
     </div>
   </section>
 
-  <!-- LA NOSTRA HISTÒRIA (PART 2) -->
   <section class="section container split">
     <div class="panel">
-      <h2>Transformació i creixement</h2>
+      <h2 data-i18n="company.growth_title">Transformació i creixement</h2>
       <div class="separator"></div>
-      <p>
-        L’any <strong>1998</strong> l’empresa es transforma en <strong>Societat Civil</strong>, formada per
-        <strong>Francesc Bujóns</strong> i el seu fill <strong>Miquel Bujóns Bach</strong> (Enginyer Tècnic Industrial),
-        assumint aquest darrer el càrrec de <strong>director gerent</strong>.
-      </p>
-      <p>
-        Paral·lelament, es produeix el trasllat a un <strong>local propi</strong> al <strong>Carrer Vicenç Dauner</strong>,
-        a escassos 200 metres de l’anterior ubicació. El nou espai, més ampli, incorpora <strong>equips digitals de
-        control i mesura</strong> per a motors i un <strong>banc de proves</strong> molt complet per a grups bomba.
-      </p>
+      <p data-i18n="company.growth_p1">L'any 1998 l'empresa es transforma en Societat Civil, formada per Francesc Bujóns i el seu fill Miquel Bujóns Bach (Enginyer Tècnic Industrial), assumint aquest darrer el càrrec de director gerent.</p>
+      <p data-i18n="company.growth_p2">Paral·lelament, es produeix el trasllat a un local propi al Carrer Vicenç Dauner, a escassos 200 metres de l'anterior ubicació. El nou espai, més ampli, incorpora equips digitals de control i mesura per a motors i un banc de proves molt complet per a grups bomba.</p>
     </div>
     <div class="panel">
       <img src="assets/foto_operari_motor.jpg" alt="Banc de proves i mesura de motors" style="border-radius:12px">
     </div>
   </section>
 
-  <!-- LA NOSTRA HISTÒRIA (PART 3) -->
   <section class="section container">
     <div class="panel">
-      <h2>Consolidació i especialització</h2>
+      <h2 data-i18n="company.consolidation_title">Consolidació i especialització</h2>
       <div class="separator"></div>
-      <p>
-        Al llarg dels anys, ampliem capacitats i serveis per donar resposta a les necessitats de la indústria:
-        <strong>estudis de racionalització de consums</strong> i <strong>compensació de reactiva</strong>, 
-        <strong>projectes elèctrics</strong>, <strong>instal·lacions industrials</strong>, i
-        <strong>reparació i muntatge d’equips electrònics industrials</strong>.
-      </p>
-      <p>
-        Finalment, l’any <strong>2007</strong> l’empresa es transforma en <strong>Societat Limitada</strong> i
-        consolida la seva trajectòria sota la denominació amb què se’ns coneix avui:
-        <strong>BUJÓNS ELECTROTÈCNICS S.L.</strong>
-      </p>
+      <p data-i18n="company.consolidation_p1">Al llarg dels anys, ampliem capacitats i serveis per donar resposta a les necessitats de la indústria: estudis de racionalització de consums i compensació de reactiva, projectes elèctrics, instal·lacions industrials, i reparació i muntatge d'equips electrònics industrials.</p>
+      <p data-i18n="company.consolidation_p2">Finalment, l'any 2007 l'empresa es transforma en Societat Limitada i consolida la seva trajectòria sota la denominació amb què se'ns coneix avui: BUJÓNS ELECTROTÈCNICS S.L.</p>
     </div>
   </section>
 
-  <!-- IMATGE DIARI A PANTALLA COMPLETA -->
   <section class="section container" style="text-align:center;">
     <img src="assets/foto_diari.jpg" alt="Recull de premsa — Bujons Electrotècnics" style="width:50%;display:inline-block;border-radius:14px;filter:drop-shadow(0 10px 30px rgba(0,0,0,.4))">
   </section>
 
-  <!-- PARTNERS STRIP -->
   <section class="partners">
     <img src="assets/certificado_gestiona_total.png" alt="Certificat Gestiona Total">
     <img src="assets/kesb_servei_oficial.jpg" alt="KSB ITUR Servei Oficial">
@@ -144,7 +117,7 @@
 
 <footer class="footer">
   <div class="container">
-    <p>© 2025 Bujons Electrotècnics · <a href="avis-legal.html">Avís Legal</a></p>
+    <p><span data-i18n="footer.copyright">© 2026 Bujons Electrotècnics ·</span> <a href="avis-legal.html" data-i18n="footer.legal">Avís Legal</a></p>
   </div>
 </footer>
 <script src="script.js"></script>
