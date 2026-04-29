@@ -1,75 +1,54 @@
 {
-  "lang_name": "English",
+  "meta": {
+    "title_home": "Bujóns Electrotècnics S.L. — Home",
+    "title_contact": "Contact · Bujons Electrotècnics"
+  },
   "nav": {
     "home": "Home",
-    "about": "About",
-    "services": "What we do",
-    "capabilities": "Capabilities",
-    "areas": "Service areas",
-    "history": "History",
+    "company": "Company",
+    "products": "Products & Services",
+    "location": "Location",
     "contact": "Contact"
   },
-  "hero": {
-    "title": "Professional electrical solutions",
-    "subtitle": "Installations, maintenance and automation for industry and home in Empordà and Girona province.",
-    "cta": "Contact us"
-  },
-  "about": {
-    "title": "About us",
-    "p1": "We are a family-owned electrical company in Figueres with decades of experience. We work with rigor, proximity and commitment.",
-    "p2": "We support the client throughout the full cycle: design, installation, commissioning and preventive maintenance."
-  },
-  "services": {
-    "title": "What we do",
-    "items": [
-      {
-        "h": "Industrial and commercial installations",
-        "p": "Electrical panels, lines, protection and low-voltage legalization."
-      },
-      {
-        "h": "Home automation and control",
-        "p": "KNX integration, sensors, programming and efficiency improvements."
-      },
-      {
-        "h": "Preventive and corrective maintenance",
-        "p": "Periodic inspections, thermography and quick response to failures."
-      },
-      {
-        "h": "Lighting and energy efficiency",
-        "p": "LED projects, lighting calculations and consumption reduction."
-      }
-    ]
-  },
-  "capabilities": {
-    "title": "Key capabilities",
-    "list": [
-      "Electrical certification & attestations",
-      "Custom panels and conduits",
-      "IT/OT & network integration",
-      "Compliance & safety",
-      "Orderly, clean workmanship"
-    ]
-  },
-  "areas": {
-    "title": "Service areas",
-    "p": "Figueres, Girona, Alt Empordà, Baix Empordà and surroundings."
-  },
-  "history": {
-    "title": "History",
-    "p1": "From the beginning, we have focused on quality workmanship and responsible innovation.",
-    "p2": "Our track record earns the trust of households, retailers and industry."
+  "home": {
+    "badge": "Engineering and industrial services",
+    "title": "BUJÓNS ELECTROTÈCNICS S.L.",
+    "subtitle": "Experience, precision and trust. Electrical solutions for industrial and professional environments.",
+    "cta_contact": "Contact us",
+    "cta_services": "View services",
+    "services_title": "Our services",
+    "service1_title": "CONSULTING",
+    "service1_desc": "Hydraulic and pumping installations. Energy and technical consulting. Electrical projects. Thermographic studies.",
+    "service2_title": "MAINTENANCE",
+    "service2_desc": "Low voltage. Commissioning and maintenance of fire protection systems. Pressure equipment: installation, repair and maintenance.",
+    "service3_title": "OTHER",
+    "service3_desc": "KSB ITUR technical service. Assembly and repair of industrial electronic equipment. AC and DC motor winding."
   },
   "contact": {
     "title": "Contact",
-    "desc": "Tell us what you need and we’ll get back to you shortly.",
-    "name": "Name",
-    "email": "Email",
+    "subtitle": "Let's talk about your project",
+    "info_title": "Contact information",
+    "phone": "Phone:",
+    "fax": "Fax:",
+    "email": "Email:",
+    "whatsapp": "WhatsApp:",
+    "address": "Address:"
+  },
+  "form": {
+    "name": "Full name",
+    "email": "Email address",
     "message": "Message",
-    "send": "Send",
-    "sending": "Sending…",
-    "sent": "Sent! Thanks for your message."
+    "submit": "Send",
+    "sending": "Sending...",
+    "legal": "By sending you accept our",
+    "legal_link": "legal policy",
+    "success": "✅ Message sent successfully!",
+    "error": "❌ An error occurred. Please try again.",
+    "error_fill": "Please fill in all fields.",
+    "error_captcha": "Complete the security verification."
   },
   "footer": {
-    "rights": "All rights reserved"
+    "copyright": "© 2026 Bujons Electrotècnics ·",
+    "legal": "Legal Notice"
   }
 }

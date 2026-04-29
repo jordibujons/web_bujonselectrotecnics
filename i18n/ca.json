@@ -1,75 +1,54 @@
 {
-  "lang_name": "Català",
+  "meta": {
+    "title_home": "Bujóns Electrotècnics S.L. — Inici",
+    "title_contact": "Contacte · Bujons Electrotècnics"
+  },
   "nav": {
     "home": "Inici",
-    "about": "Qui som",
-    "services": "Què fem",
-    "capabilities": "Capacitats",
-    "areas": "Zones on treballem",
-    "history": "Història",
+    "company": "Empresa",
+    "products": "Productes i Serveis",
+    "location": "On som",
     "contact": "Contacte"
   },
-  "hero": {
-    "title": "Solucions elèctriques professionals",
-    "subtitle": "Instal·lacions, manteniment i automatització per a indústria i llar a l’Empordà i província de Girona.",
-    "cta": "Contacta ara"
-  },
-  "about": {
-    "title": "Qui som",
-    "p1": "Som una empresa familiar d’electricitat a Figueres amb dècades d’experiència. Treballem amb rigor, proximitat i compromís.",
-    "p2": "Acompanyem el client en tot el cicle: disseny, instal·lació, posada en marxa i manteniment preventiu."
-  },
-  "services": {
-    "title": "Què fem",
-    "items": [
-      {
-        "h": "Instal·lacions industrials i terciàries",
-        "p": "Quadres elèctrics, línies, proteccions i legalitzacions de baixa tensió."
-      },
-      {
-        "h": "Domòtica i automatització",
-        "p": "Integració KNX, sensors, programació i millora d’eficiència."
-      },
-      {
-        "h": "Manteniment preventiu i correctiu",
-        "p": "Inspeccions periòdiques, termografia i resposta àgil a avaries."
-      },
-      {
-        "h": "Il·luminació i eficiència energètica",
-        "p": "Projectes LED, càlcul lumínic i reducció de consums."
-      }
-    ]
-  },
-  "capabilities": {
-    "title": "Capacitats principals",
-    "list": [
-      "Certificació elèctrica i butlletins",
-      "Quadres i canalitzacions a mida",
-      "Integració amb IT/OT i xarxes",
-      "Compliment normatiu i seguretat",
-      "Treball ordenat i net a obra"
-    ]
-  },
-  "areas": {
-    "title": "Zones on treballem",
-    "p": "Figueres, Girona, Alt Empordà, Baix Empordà i voltants."
-  },
-  "history": {
-    "title": "Història",
-    "p1": "Des dels inicis, hem apostat per la feina ben feta i la innovació responsable.",
-    "p2": "El nostre recorregut avala la confiança de clients particulars, comerços i indústries."
+  "home": {
+    "badge": "Enginyeria i serveis industrials",
+    "title": "BUJÓNS ELECTROTÈCNICS S.L.",
+    "subtitle": "Experiència, precisió i confiança. Solucions elèctriques per a entorns industrials i professionals.",
+    "cta_contact": "Contacta'ns",
+    "cta_services": "Veure serveis",
+    "services_title": "Els nostres serveis",
+    "service1_title": "ASSESSORAMENTS",
+    "service1_desc": "Instal·lacions hidràuliques i de bombeig. Assessorament energètic i tècnic. Projectes elèctrics. Estudis termogràfics.",
+    "service2_title": "MANTENIMENTS",
+    "service2_desc": "Baixa tensió. Posada en marxa i manteniment d'instal·lacions contra incendis. Equips a pressió: instal·lació, reparació i manteniment.",
+    "service3_title": "ALTRES",
+    "service3_desc": "Servei tècnic KSB ITUR. Muntatge i reparació d'equips electrònics industrials. Bobinatge de motors C/A i C/C."
   },
   "contact": {
     "title": "Contacte",
-    "desc": "Explica’ns què necessites i et respondrem el més aviat possible.",
-    "name": "Nom",
+    "subtitle": "Parlem del teu projecte",
+    "info_title": "Dades de contacte",
+    "phone": "Telèfon:",
+    "fax": "Fax:",
+    "email": "Mail:",
+    "whatsapp": "WhatsApp:",
+    "address": "Adreça:"
+  },
+  "form": {
+    "name": "Nom i cognoms",
     "email": "Correu electrònic",
     "message": "Missatge",
-    "send": "Enviar",
-    "sending": "Enviant…",
-    "sent": "Enviat! Gràcies pel teu missatge."
+    "submit": "Enviar",
+    "sending": "Enviant...",
+    "legal": "En enviar acceptes la nostra",
+    "legal_link": "política legal",
+    "success": "✅ Missatge enviat correctament!",
+    "error": "❌ Hi ha hagut un error. Torna-ho a provar.",
+    "error_fill": "Si us plau, omple tots els camps.",
+    "error_captcha": "Completa la verificació de seguretat."
   },
   "footer": {
-    "rights": "Tots els drets reservats"
+    "copyright": "© 2026 Bujons Electrotècnics ·",
+    "legal": "Avís Legal"
   }
 }

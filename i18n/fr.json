@@ -1,75 +1,54 @@
 {
-  "lang_name": "Français",
+  "meta": {
+    "title_home": "Bujóns Electrotècnics S.L. — Accueil",
+    "title_contact": "Contact · Bujons Electrotècnics"
+  },
   "nav": {
     "home": "Accueil",
-    "about": "Qui sommes-nous",
-    "services": "Ce que nous faisons",
-    "capabilities": "Compétences",
-    "areas": "Zones d’intervention",
-    "history": "Histoire",
+    "company": "Entreprise",
+    "products": "Produits et Services",
+    "location": "Où sommes-nous",
     "contact": "Contact"
   },
-  "hero": {
-    "title": "Solutions électriques professionnelles",
-    "subtitle": "Installations, maintenance et automatisation pour l’industrie et le résidentiel dans l’Empordà et la province de Gérone.",
-    "cta": "Nous contacter"
-  },
-  "about": {
-    "title": "Qui sommes-nous",
-    "p1": "Entreprise familiale d’électricité à Figueres avec des décennies d’expérience. Travail rigoureux, proximité et engagement.",
-    "p2": "Nous accompagnons le client tout au long du cycle : conception, installation, mise en service et maintenance préventive."
-  },
-  "services": {
-    "title": "Ce que nous faisons",
-    "items": [
-      {
-        "h": "Installations industrielles et tertiaires",
-        "p": "Tableaux électriques, lignes, protections et homologations basse tension."
-      },
-      {
-        "h": "Domotique et automatisation",
-        "p": "Intégration KNX, capteurs, programmation et amélioration de l’efficacité."
-      },
-      {
-        "h": "Maintenance préventive et corrective",
-        "p": "Inspections périodiques, thermographie et réponse rapide aux pannes."
-      },
-      {
-        "h": "Éclairage et efficacité énergétique",
-        "p": "Projets LED, calcul lumineux et réduction de la consommation."
-      }
-    ]
-  },
-  "capabilities": {
-    "title": "Compétences clés",
-    "list": [
-      "Certification électrique et attestations",
-      "Tableaux et canalisations sur mesure",
-      "Intégration IT/OT et réseaux",
-      "Conformité et sécurité",
-      "Travail ordonné et propre sur site"
-    ]
-  },
-  "areas": {
-    "title": "Zones d’intervention",
-    "p": "Figueres, Gérone, Alt Empordà, Baix Empordà et environs."
-  },
-  "history": {
-    "title": "Histoire",
-    "p1": "Dès le début, nous avons misé sur le travail bien fait et l’innovation responsable.",
-    "p2": "Notre parcours inspire la confiance des particuliers, commerces et industries."
+  "home": {
+    "badge": "Ingénierie et services industriels",
+    "title": "BUJÓNS ELECTROTÈCNICS S.L.",
+    "subtitle": "Expérience, précision et confiance. Solutions électriques pour environnements industriels et professionnels.",
+    "cta_contact": "Contactez-nous",
+    "cta_services": "Voir les services",
+    "services_title": "Nos services",
+    "service1_title": "CONSEIL",
+    "service1_desc": "Installations hydrauliques et de pompage. Conseil énergétique et technique. Projets électriques. Études thermographiques.",
+    "service2_title": "MAINTENANCE",
+    "service2_desc": "Basse tension. Mise en service et maintenance des installations anti-incendie. Équipements sous pression : installation, réparation et maintenance.",
+    "service3_title": "AUTRES",
+    "service3_desc": "Service technique KSB ITUR. Montage et réparation d'équipements électroniques industriels. Bobinage de moteurs AC et DC."
   },
   "contact": {
     "title": "Contact",
-    "desc": "Dites-nous votre besoin et nous vous répondrons au plus vite.",
-    "name": "Nom",
-    "email": "E-mail",
+    "subtitle": "Parlons de votre projet",
+    "info_title": "Coordonnées",
+    "phone": "Téléphone:",
+    "fax": "Fax:",
+    "email": "Email:",
+    "whatsapp": "WhatsApp:",
+    "address": "Adresse:"
+  },
+  "form": {
+    "name": "Nom et prénom",
+    "email": "Adresse e-mail",
     "message": "Message",
-    "send": "Envoyer",
-    "sending": "Envoi…",
-    "sent": "Envoyé ! Merci pour votre message."
+    "submit": "Envoyer",
+    "sending": "Envoi en cours...",
+    "legal": "En envoyant, vous acceptez notre",
+    "legal_link": "politique légale",
+    "success": "✅ Message envoyé avec succès !",
+    "error": "❌ Une erreur s'est produite. Veuillez réessayer.",
+    "error_fill": "Veuillez remplir tous les champs.",
+    "error_captcha": "Complétez la vérification de sécurité."
   },
   "footer": {
-    "rights": "Tous droits réservés"
+    "copyright": "© 2026 Bujons Electrotècnics ·",
+    "legal": "Mentions légales"
   }
 }
