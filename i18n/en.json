@@ -1,11 +1,11 @@
 {
   "meta": {
     "title_home": "Bujóns Electrotècnics S.L. — Home",
-    "title_contact": "Contact · Bujons Electrotècnics",
-    "title_legal": "Legal Notice · Bujons Electrotècnics",
-    "title_company": "Company · Bujons Electrotècnics",
-    "title_products": "Products & Services · Bujons Electrotècnics",
-    "title_location": "Location · Bujons Electrotècnics"
+    "title_contact": "Contact · Bujóns Electrotècnics",
+    "title_legal": "Legal Notice · Bujóns Electrotècnics",
+    "title_company": "Company · Bujóns Electrotècnics",
+    "title_products": "Products & Services · Bujóns Electrotècnics",
+    "title_location": "Location · Bujóns Electrotècnics"
   },
   "nav": {
     "home": "Home",
@@ -154,7 +154,7 @@
     "updates_text": "BUJÓNS ELECTROTÈCNICS, S.L. reserves the right to modify or update the content, design or conditions of access to this website at any time and without prior notice, in order to keep the information up to date and adapted to current regulations."
   },
   "footer": {
-    "copyright": "© 2026 Bujons Electrotècnics ·",
+    "copyright": "© 2026 Bujóns Electrotècnics ·",
     "legal": "Legal Notice"
   }
 }
