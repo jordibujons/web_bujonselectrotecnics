@@ -1,7 +1,17 @@
-# Bujons — Web (tema antracita + PCB animat)
-Generat: 2025-11-07
+# Bujons Electrotècnics — Web
 
-- 6 pàgines en **català** (Inici, Empresa, Productes i Serveis, On som, Contacte, Avís legal)
-- **Multillengua**: ES/FR/EN per a totes les pàgines (contingut placeholder)
-- Formulari a `contacte.html` amb placeholders: reCAPTCHA (`AQUI_LA_TEVA_SITE_KEY`) i Formspree (`YOUR_ENDPOINT`)
-- Fons animat: `assets/tech_lines_pcb_animated.svg`
+Web corporativa de **Bujóns Electrotècnics, S.L.**
+
+## 📋 Estructura
+- 6 páginas: Inici, Empresa, Productes i Serveis, On som, Contacte, Avís legal
+- **5 idiomes** (CA, ES, FR, EN, IT) con sistema i18n dinámico (JSON)
+- Tema oscuro antracita con fondo PCB animado
+- Formulario de contacto con Formspree + Cloudflare Turnstile
+- Validación visual + WhatsApp con mensaje según idioma
+
+## 🛠️ Tecnologías
+- HTML5 / CSS3 / JavaScript vanilla
+- Sistema i18n basado en archivos JSON
+- Formspree para envío de emails
+- Cloudflare Turnstile (anti-spam)
+- Hosting: Cloudflare Pages
