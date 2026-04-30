@@ -30,18 +30,27 @@
   },
   "contact": {
     "title": "Contacte",
-    "subtitle": "Parlem del teu projecte"
+    "subtitle": "Parlem del teu projecte",
+    "phone_label": "Telèfon:",
+    "fax_label": "Fax:",
+    "email_label": "Email:",
+    "address_label": "Adreça:"
   },
   "form": {
     "name": "Nom i cognoms",
     "email": "Correu electrònic",
+    "phone": "Telèfon (opcional)",
     "message": "Missatge",
     "submit": "Enviar",
     "sending": "Enviant...",
     "success": "✅ Missatge enviat correctament!",
     "error": "❌ Hi ha hagut un error",
     "error_fill": "Si us plau, omple tots els camps.",
-    "error_captcha": "Completa la verificació de seguretat."
+    "error_captcha": "Completa la verificació de seguretat.",
+    "error_name": "Nom massa curt",
+    "error_email": "Correu invàlid",
+    "error_phone": "Telèfon invàlid",
+    "error_message": "Missatge massa curt"
   },
   "company": {
     "title": "Empresa",
