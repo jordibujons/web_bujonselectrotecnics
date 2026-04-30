@@ -1,6 +1,6 @@
 /* ============================================================
-   BUJÓNS ELECTROTÈCNICS — script.js DEFINITIVO v2.0
-   5 idiomas + validación + banner + WhatsApp
+   BUJÓNS ELECTROTÈCNICS — script.js DEFINITIVO v2.1
+   5 idiomas + validación + banner + WhatsApp (nuevo nº)
    ============================================================ */
 
 (function(){
@@ -101,7 +101,7 @@ const i18n = {
     };
     
     const message = messages[this.currentLang] || messages.ca;
-    const phone = "34647931945";
+    const phone = "34639036201";
     whatsappLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   }
 };
@@ -207,7 +207,6 @@ if(form){
   const phoneInput = form.querySelector('[name="phone"]');
   const messageInput = form.querySelector('[name="message"]');
   
-  // Validación en tiempo real
   if(nameInput){
     nameInput.addEventListener('blur', () => {
       if(nameInput.value.trim().length < 2){
@@ -249,7 +248,6 @@ if(form){
     });
   }
   
-  // Submit
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -260,7 +258,6 @@ if(form){
     
     console.log('📧 Form submission started');
     
-    // Validar
     let hasErrors = false;
     
     if(name.length < 2){
@@ -285,7 +282,6 @@ if(form){
     
     if(hasErrors) return;
     
-    // Turnstile
     let token = null;
     const turnstileInput = document.querySelector('[name="cf-turnstile-response"]');
     if(turnstileInput){
@@ -344,7 +340,6 @@ if(form){
   });
 }
 
-// ── INIT ────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   i18n.init();
 });
