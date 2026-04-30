@@ -1,10 +1,12 @@
 /* ============================================================
-   BUJÓNS ELECTROTÈCNICS — script.js DEFINITIVO
+   BUJÓNS ELECTROTÈCNICS — script.js DEFINITIVO v2.0
+   5 idiomas + validación + banner + WhatsApp
    ============================================================ */
 
 (function(){
 'use strict';
 
+// ── 1. SISTEMA i18n (5 IDIOMAS) ────────────────────────────
 const i18n = {
   currentLang: localStorage.getItem('lang') || 'ca',
   translations: {},
@@ -14,6 +16,7 @@ const i18n = {
     this.applyTranslations();
     this.updateActiveFlags();
     this.setupLanguageSwitchers();
+    this.setupWhatsAppLink();
   },
   
   async loadLanguage(lang){
@@ -61,17 +64,17 @@ const i18n = {
   },
   
   updateActiveFlags(){
+    const langs = ['ca', 'es', 'fr', 'en', 'it'];
     document.querySelectorAll('.flags img, .flags-mobile img').forEach((img, i) => {
-      const langs = ['ca', 'es', 'fr', 'en'];
-      const lang = langs[i % 4];
+      const lang = langs[i % 5];
       img.classList.toggle('active', lang === this.currentLang);
     });
   },
   
   setupLanguageSwitchers(){
+    const langs = ['ca', 'es', 'fr', 'en', 'it'];
     document.querySelectorAll('.flags img, .flags-mobile img').forEach((img, i) => {
-      const langs = ['ca', 'es', 'fr', 'en'];
-      const lang = langs[i % 4];
+      const lang = langs[i % 5];
       img.style.cursor = 'pointer';
       img.addEventListener('click', async (e) => {
         e.preventDefault();
@@ -79,12 +82,31 @@ const i18n = {
           await this.loadLanguage(lang);
           this.applyTranslations();
           this.updateActiveFlags();
+          this.setupWhatsAppLink();
         }
       });
     });
+  },
+  
+  setupWhatsAppLink(){
+    const whatsappLink = document.querySelector('.whatsapp-link');
+    if(!whatsappLink) return;
+    
+    const messages = {
+      ca: "Hola, em poso en contacte amb vosaltres des de la pàgina web de Bujóns Electrotècnics.",
+      es: "Hola, me pongo en contacto con vosotros desde la página web de Bujóns Electrotècnics.",
+      fr: "Bonjour, je vous contacte depuis le site web de Bujóns Electrotècnics.",
+      en: "Hello, I'm contacting you from the Bujóns Electrotècnics website.",
+      it: "Salve, vi contatto dal sito web di Bujóns Electrotècnics."
+    };
+    
+    const message = messages[this.currentLang] || messages.ca;
+    const phone = "34647931945";
+    whatsappLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   }
 };
 
+// ── 2. ANIMACIONES SCROLL ──────────────────────────────────
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){
@@ -102,6 +124,7 @@ document.querySelectorAll('.card,.panel').forEach(el => {
   io.observe(el);
 });
 
+// ── 3. MENÚ MÓVIL ──────────────────────────────────────────
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('.mobile-menu');
 
@@ -129,22 +152,140 @@ if(toggle && menu){
   });
 }
 
+// ── 4. VALIDACIÓN DEL FORMULARIO ───────────────────────────
+function validateEmail(email){
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function validatePhone(phone){
+  if(!phone) return true;
+  return /^[+]?[\d\s\-()]{9,}$/.test(phone);
+}
+
+function showFieldError(input, message){
+  input.classList.add('invalid');
+  input.classList.remove('valid');
+  let errorEl = input.nextElementSibling;
+  if(!errorEl || !errorEl.classList.contains('field-error')){
+    errorEl = document.createElement('div');
+    errorEl.className = 'field-error';
+    input.parentNode.insertBefore(errorEl, input.nextSibling);
+  }
+  errorEl.textContent = message;
+  errorEl.classList.add('show');
+}
+
+function hideFieldError(input){
+  input.classList.remove('invalid');
+  input.classList.add('valid');
+  const errorEl = input.nextElementSibling;
+  if(errorEl && errorEl.classList.contains('field-error')){
+    errorEl.classList.remove('show');
+  }
+}
+
+function showSuccessBanner(message){
+  let banner = document.querySelector('.success-banner');
+  if(!banner){
+    banner = document.createElement('div');
+    banner.className = 'success-banner';
+    document.body.appendChild(banner);
+  }
+  banner.textContent = message;
+  banner.classList.add('show');
+  
+  setTimeout(() => {
+    banner.classList.remove('show');
+  }, 5000);
+}
+
+// ── 5. FORMULARIO ──────────────────────────────────────────
 const form = document.getElementById('contact-form');
 if(form){
+  const nameInput = form.querySelector('[name="name"]');
+  const emailInput = form.querySelector('[name="email"]');
+  const phoneInput = form.querySelector('[name="phone"]');
+  const messageInput = form.querySelector('[name="message"]');
+  
+  // Validación en tiempo real
+  if(nameInput){
+    nameInput.addEventListener('blur', () => {
+      if(nameInput.value.trim().length < 2){
+        showFieldError(nameInput, i18n.get('form.error_name') || 'Nom massa curt');
+      }else{
+        hideFieldError(nameInput);
+      }
+    });
+  }
+  
+  if(emailInput){
+    emailInput.addEventListener('blur', () => {
+      if(!validateEmail(emailInput.value.trim())){
+        showFieldError(emailInput, i18n.get('form.error_email') || 'Correu invàlid');
+      }else{
+        hideFieldError(emailInput);
+      }
+    });
+  }
+  
+  if(phoneInput){
+    phoneInput.addEventListener('blur', () => {
+      const phone = phoneInput.value.trim();
+      if(phone && !validatePhone(phone)){
+        showFieldError(phoneInput, i18n.get('form.error_phone') || 'Telèfon invàlid');
+      }else{
+        hideFieldError(phoneInput);
+      }
+    });
+  }
+  
+  if(messageInput){
+    messageInput.addEventListener('blur', () => {
+      if(messageInput.value.trim().length < 10){
+        showFieldError(messageInput, i18n.get('form.error_message') || 'Missatge massa curt');
+      }else{
+        hideFieldError(messageInput);
+      }
+    });
+  }
+  
+  // Submit
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const phone = phoneInput ? phoneInput.value.trim() : '';
+    const message = messageInput.value.trim();
     
     console.log('📧 Form submission started');
     
-    if(!name || !email || !message){
-      alert(i18n.get('form.error_fill') || 'Si us plau, omple tots els camps.');
-      return;
+    // Validar
+    let hasErrors = false;
+    
+    if(name.length < 2){
+      showFieldError(nameInput, i18n.get('form.error_name') || 'Nom massa curt');
+      hasErrors = true;
     }
     
+    if(!validateEmail(email)){
+      showFieldError(emailInput, i18n.get('form.error_email') || 'Correu invàlid');
+      hasErrors = true;
+    }
+    
+    if(phone && !validatePhone(phone)){
+      showFieldError(phoneInput, i18n.get('form.error_phone') || 'Telèfon invàlid');
+      hasErrors = true;
+    }
+    
+    if(message.length < 10){
+      showFieldError(messageInput, i18n.get('form.error_message') || 'Missatge massa curt');
+      hasErrors = true;
+    }
+    
+    if(hasErrors) return;
+    
+    // Turnstile
     let token = null;
     const turnstileInput = document.querySelector('[name="cf-turnstile-response"]');
     if(turnstileInput){
@@ -165,6 +306,7 @@ if(form){
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
+    if(phone) formData.append('phone', phone);
     formData.append('message', message);
     formData.append('cf-turnstile-response', token);
     formData.append('_subject', `Nou missatge de ${name}`);
@@ -182,8 +324,11 @@ if(form){
       const data = await res.json();
       
       if(res.ok){
-        alert(i18n.get('form.success') || '✅ Missatge enviat!');
+        showSuccessBanner(i18n.get('form.success') || '✅ Missatge enviat!');
         form.reset();
+        document.querySelectorAll('input, textarea').forEach(el => {
+          el.classList.remove('valid', 'invalid');
+        });
         if(window.turnstile) window.turnstile.reset();
       }else{
         console.error('❌ Error:', data);
@@ -199,6 +344,7 @@ if(form){
   });
 }
 
+// ── INIT ────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   i18n.init();
 });

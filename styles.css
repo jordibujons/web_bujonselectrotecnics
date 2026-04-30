@@ -3,6 +3,7 @@
   --bg:#101316; --bg-2:#0c0f12; --ink:#e7ecf2; --muted:#a9b5c2;
   --brand:#c21b4a; --blue:#349bc7; --card:#151a1e; --line:#232831;
   --radius:18px; --shadow: 0 16px 40px rgba(0,0,0,.4);
+  --success:#22c55e; --error:#ef4444;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -13,7 +14,6 @@ body{
   line-height:1.65;
   position:relative;
 }
-/* BACKGROUND ANIMADO EN TODA LA PÁGINA */
 body::before{
   content:'';
   position:fixed;
@@ -67,10 +67,91 @@ h1{font:800 clamp(1.8rem,2vw+1.4rem,2.6rem)/1.1 Poppins; margin:0 0 .4rem; text-
 .partners img{max-height:70px;filter:saturate(1.05)}
 .footer{background:#0c1117;border-top:1px solid var(--line);color:#cad7e4;text-align:center;padding:1rem 0;position:relative;z-index:1}
 .footer a{text-decoration:underline}
-.form{display:grid;gap:1rem;max-width:560px}
-input,textarea{width:100%;padding:.7rem;border:1px solid #2c3440;background:#11161b;color:#e7ecf2;border-radius:10px;font:inherit}
-textarea{min-height:140px}
 .map{border:0;width:100%;height:360px;border-radius:12px;filter:drop-shadow(0 8px 26px rgba(0,0,0,.35))}
+
+/* ── FORMULARIO ── */
+.form{display:grid;gap:1rem;max-width:560px;position:relative}
+input,textarea{
+  width:100%;
+  padding:.7rem;
+  border:1px solid #2c3440;
+  background:#11161b;
+  color:#e7ecf2;
+  border-radius:10px;
+  font:inherit;
+  transition:border-color .2s;
+}
+textarea{min-height:140px}
+input:focus,textarea:focus{outline:none;border-color:#3b4553}
+
+/* VALIDACIÓN */
+input.valid,textarea.valid{border-color:var(--success);background:#11161b}
+input.invalid,textarea.invalid{border-color:var(--error);background:#11161b}
+.field-error{color:var(--error);font-size:.85rem;margin-top:.3rem;display:none}
+.field-error.show{display:block}
+
+/* BANNER DE ÉXITO */
+.success-banner{
+  position:fixed;
+  top:80px;
+  left:50%;
+  transform:translateX(-50%) translateY(-100px);
+  background:linear-gradient(135deg,var(--success),#16a34a);
+  color:#fff;
+  padding:1rem 1.5rem;
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(34,197,94,.4);
+  font-weight:600;
+  z-index:100;
+  opacity:0;
+  transition:all .3s ease;
+}
+.success-banner.show{
+  transform:translateX(-50%) translateY(0);
+  opacity:1;
+}
+
+/* WHATSAPP MEJORADO */
+.contact-info{
+  display:grid;
+  gap:.8rem;
+}
+.contact-info p{
+  margin:0;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+.contact-info strong{
+  display:inline-block;
+  min-width:90px;
+}
+.whatsapp-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  color:var(--ink);
+  text-decoration:none;
+  transition:color .2s;
+}
+.whatsapp-link:hover{color:#25D366}
+.whatsapp-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:24px;
+  height:24px;
+  background:#25D366;
+  border-radius:50%;
+  color:#fff;
+  font-size:14px;
+  transition:transform .2s;
+}
+.whatsapp-link:hover .whatsapp-icon{
+  transform:scale(1.1);
+}
+
+/* ── MOBILE MENU ── */
 .nav-toggle{
   display:none;
   flex-direction:column;
