@@ -31,6 +31,7 @@
   "contact": {
     "title": "Contacte",
     "subtitle": "Parlem del teu projecte",
+    "info_title": "Dades de contacte",
     "phone_label": "Telèfon:",
     "fax_label": "Fax:",
     "email_label": "Email:",
